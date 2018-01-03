@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<title>Crowd Reputations</title>
+</head>
+
+<body>
+     <div id="header">
+          <h1>Crowd Reputations</h1>
+      </div>
+      <div id="page">
+		
+      <!-- <div class="bar"> -->
+      <!--       <div class="link"><a href="http://nyunetworks.com/index.html">HOME</a></div> -->
+      <!-- </div> -->
+      
+      <hr/>
+        
+        <div class="contentText">
+        <br/><br/><br/>
+        <p> The growing popularity of online crowdsourcing services like Amazon Mechanical Turk, CrowdFlower and citizen science projects like FoldIt, Galaxy Zoo have made it very easy to leverage the power of the masses to tackle complex tasks that cannot be solved by automated algorithms and systems alone. One of the most popular crowdsourced tasks is data annotation for machine learning applications - image labeling, transcribing speech etc. The goal here is to aggregate the responses from the crowd to determine the underlying (unknown) ground-truth of the data. However, these applications are vulnerable to noisy labels introduced either unintentionally by unreliable workers or intentionally by spammers and malicious workers. Therefore it is important to identify the underlying "quality" of any worker so that we can determine which workers' labels we can trust. This problem is challenging due to the following reasons: (a) Workers are often anonymous and transient and might be difficult to track over time (b) Workers can have varying expertise, beliefs, interests and incentives (c) Some tasks might be more difficult than others so that the notion of quality might need to be task-specific.</p>
+	<br>
+        <p>We propose to address this problem via a reputation system for crowd-workers. Intuitively, a worker has high reputation if she performs the tasks "honestly" as opposed to spamming or providing malicious labels. For instance, it has been shown that a lot of workers complete the tasks in a short period of time by providing uniform or random labels, just to earn the payment associated with completing the task. These workers don't have any incentive to do the tasks diligently and are only motivated by the payment reward. Further, in crowdsourced-review sites like Amazon, Yelp etc., businesses have incentives to hire people to post fake reviews to boost up their own rating as well as degrade the ratings of competitors. Both these kinds of workers should be assigned a low reputation. Our goal is to design efficient algorithms for computing worker reputations in crowdsourcing systems. </p>
+        <br/><br/>
+        </div>
+        
+        <center><img src="http://nyubigdata.com/Reputations_files/intro.jpg" alt="Banner Image" width="60%"></center>
+ 
+        <div class="contentTitle"><h1>Drafts & Publications</h1></div>
+        <div class="contentText">
+        
+            <p><b><a href="http://papers.nips.cc/paper/5393-reputation-based-worker-filtering-in-crowdsourcing.pdf">Reputation-based Worker Filtering in Crowdsourcing</a></b></p>
+            <p>In this paper, we study the problem of aggregating noisy labels from crowd workers
+            to infer the underlying true labels of binary tasks. Unlike most prior work
+            which has examined this problem under the random worker paradigm, we consider
+            a much broader class of adversarial workers with no specific assumptions on their
+            labeling strategy. Our key contribution is the design of a computationally efficient
+            reputation algorithm to identify and filter out these adversarial workers in crowdsourcing
+            systems. Our algorithm uses the concept of optimal semi-matchings
+            in conjunction with worker penalties based on label disagreements, to assign a
+            reputation score for every worker. We provide strong theoretical guarantees for
+            deterministic adversarial strategies as well as the extreme case of sophisticated
+            adversaries where we analyze the worst-case behavior of our algorithm. Finally,
+            we show that our reputation algorithm can significantly improve the accuracy of
+            existing label aggregation algorithms in real-world crowdsourcing datasets.</p>
+            
+
+        </div>
+        <div class="contentTitle"><h1>People</h1></div>
+        <div class="contentText">
+        <ul>
+          <li><p>Ashwin Venkataraman</p></li>
+          <li><p>Srikanth Jagabathula</p></li>
+          <li><p>Lakshminarayanan Subramanian</p></li>
+        </ul>
+          <p>&nbsp;</p>
+        </div>
+    
+        <!-- CHANGE OR REMOVE FUNDING AS NEEDED.-->
+        <!--/div-->
+       
+</div>
+      
+
+        <div id="footer"><a href="#"></a></div>
+</body>
+</html>

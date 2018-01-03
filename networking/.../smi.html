@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SMI</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    
+	
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color:#57068c;">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#" style="color:#FFF">SMI</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active" style="color:#FFF"><a href="#">Home</a></li>
+            <!--<li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <br/>
+    
+     <!-- Begin page content -->
+     <div class="container">
+        <div class="jumbotron">
+            <h2><center>Secure Mobile Identities (SMI)</center></h2>
+            <p class="lead"><center>(Working Paper)</center></p>
+            
+        </div>
+        
+        
+        <div>
+        	<h1 style="color:#57068c">About</h1>
+            <p>Mobile devices are increasingly becoming vulnerable to a variety of network-level security threats including different
+            types of man-in-the-middle (MITM) attacks such as message
+            interceptions and modifications, eavesdropping on calls and text messages, message spoofing and phishing attacks.
+            In this paper, we propose the design and implementation of Secure Mobile Identities (SMI), a secure key-exchange protocol
+            that enables a mobile user to establish a secure and trustworthy communication channel with other mobile users
+            in the presence of adversaries. The design of SMI places initial bootstrap trust on the cellular providers and builds
+            upon the basic assumption that cellular networks offer a unique "probabilistically secure one-way" channel to connected mobile
+            devices; unlike Internet routes which can be hijacked, the cellular network routing layer is protected thereby forcing
+            the MITM attacker to attack only the last-hop wireless channel between the tower and the device. Building on this assumption,
+            SMI provides a spatio-temporal, multi-path, repetitive challenge-response key exchange protocol to enable two
+            mobile entities to tag every key exchange with additional meta information and leverage diversity across paths to build
+            a reputation score for every key. The security of SMI can be further enhanced with the use of external trusted entities providing
+            non-forgeable, "trusted location" signatures (e.g. trusted GPS, trusted cell towers, physical synchronization points).
+            In this paper, we demonstrate the effectiveness of our protocol using a prototype implementation and demonstrate ease
+            of use across a variety of real-world channels. We also show how the SMI abstraction can enable new forms of secure mobile
+            applications including secure cash transfer, secure physical identities and secure file exchange.</p>
+        </div>
+        <div>
+        	<h1 style="color:#57068c">People</h1>
+            
+            <br/>
+            <b>Talal Ahmad</b>
+            <br/>
+            Courant Institute of Mathematical Sciences, New York University
+            <br/>
+            <br/>
+            
+            <br/>
+            <b>Fareeha Amjad</b>
+            <br/>
+            Center for Technology and Economic Development, NYUAD
+            <br/>
+            <br/>
+            
+            <br/>
+            <b>Varun Chandrasekaran</b>
+            <br/>
+            Courant Institute of Mathematical Sciences, New York University
+            <br/>
+            <br/>
+
+            <br/>
+            <b>Ashlesh Sharma</b>
+            <br/>
+            Courant Institute of Mathematical Sciences, New York University
+            <br/>
+            <br/>
+
+            <br/>
+            <b>Lakshminarayanan Subramanian</b>
+            <br/>
+            Courant Institute of Mathematical Sciences, New York University
+            <br/>
+            Center for Technology and Economic Development, NYUAD
+            <br/>
+            <br/>
+            
+        </div>
+        
+        <br/>
+        <br/>
+        <br/>
+	</div>    
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

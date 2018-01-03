@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta name="google-site-verification" content="RZwgYpCMjI1MsT5-YY0opqebt1Bd21RaOCgPWZpwTl0" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <title>NYU Big Data Research</title>
+  </head>
+  
+  <body>
+    <div id="header">
+      <h1>Big Data Research</h1>
+    </div>
+    
+    <div id="page">
+      
+      <div class="bar">
+	<div class="link"><a href="index.html">HOME</a></div>
+	<div class="link"><a href="people.html">PEOPLE</a></div>
+	<div class="link"><a href="projects.html">PROJECTS</a></div>
+	<div class="link"><a href="publications.html">PUBLICATIONS</a></div>
+      </div>
+
+      
+      <script type="text/javascript">
+	var slideimages = new Array() // create new array to preload images
+	slideimages[0] = new Image() // create new instance of image object
+	slideimages[0].src = "images/event_model.png" // set image src property to image path, preloading image in the process
+	slideimages[1] = new Image()
+	slideimages[1].src = "images/intro.jpg"
+	slideimages[2] = new Image()
+	slideimages[2].src = "images/traffic.jpg"
+      </script>
+
+      <a href="javascript:slidelink()"><img style="float:right; margin: 10px 50px 5px 10px;" src="images/event_model.png" id="slide" width="900" height="400"/></a>
+      <br style="clear:both" />
+      <script type="text/javascript">
+	
+	//variable that will increment through the images
+	var step=0
+	var whichimage = 0
+	
+	function slideit(){
+	//if browser does not support the image object, exit.
+	if (!document.images)
+	return
+	document.getElementById('slide').src = slideimages[step].src
+	whichimage = step
+	if (step<2)
+		   step++
+		   else
+		   step=0
+		   //call function "slideit()" every 2.5 seconds
+		   setTimeout("slideit()",2500)
+		   }
+		   
+		   
+		   function slidelink(){
+		   if (whichimage == 0)
+		   window.location = "News_analytics.html"
+		   else if (whichimage == 1)
+		   window.location = "Reputations.html"
+		   else if (whichimage == 2)
+		   window.location = "traffic.html"
+		   
+		   }
+		   slideit()
+		   
+		   </script>
+      
+      <!--
+	  <body>
+	    <div class="slider">
+	      <div><img src="images/Cover_image.jpg" alt="Banner Image" height="100%" width="100%"></div>
+		<div><img src="images/Cover_image.jpg" al t="Banner Image" height="100%" width="100%"></div>
+		  <div><img src="images/Cover_image.jpg" alt="Banner Image" height="100%" width="100%"></div>
+
+		  </div>
+		  <center><img src="images/Cover_image.jpg" alt="Banner Image" height="100%" width="100%"></center> -->
+      <div class="contentTitle"><h1>Overview</h1></div>
+      <div class="contentText">
+	<p>The Big Data Lab focuses on research at the intersection of Systems, Algorithms and Machine Learning and 
+	  is led by faculty at the NYU Courant Institute of Mathematical Sciences and the NYU Stern School of Business. We work 
+	  on developing scalable and adaptive big data platforms for real world applications that can automatically learn and predict 
+	  different phenomena from highly diverse, sparse and noisy data sources. Our group works on several big data application 
+	  domains including health, education, crowdsourcing, urban informatics and business analytics.</p>
+        
+	<!--
+	    <p>&nbsp;</p>
+	    Some of our ongoing projects include:
+	    <ul>
+	      <li> Event Analytics from News Data</li>
+	      <li> Sentiment Analysis on Financial Articles</li>
+	      <li> Predicting Customer Demand</li>
+	    </ul> -->
+        <p>&nbsp;</p>
+	<p>For more details, see the <a href="projects.html">Projects</a> page.</p>
+	<!--<p>We are part of the Computer Science Department at New York University.  Our primary focus is on a new emerging area of research, 
+	    which we term "Societal Network Science".
+	    The goal is to understand important societal, social and human 
+	    indicators based on the network characteristics of how humans, physical and digital entities interact and capture the patterns and the 
+	    potential causal relationships between these interactions. Our longer term vision is to build an automated analytics engine  that can 
+	    learn and infer socio-economic phenomena from highly diverse and noisy data sources, like news, social media, traffic etc.</p>
+	    <p>&nbsp;</p>
+        <p> We are also interested in understanding user behavior in online systems such as crowdsourcing platforms, recommender systems and review websites. One of our goals is to design efficient algorithms to identify similar users in recommender systems based on their stated preferences for different content. This can be really beneficial for improved user experience
+          as a result of better recommendation and personalization. We have also designed algorithms to identify trustworthy workers in micro-task crowdsourcing platforms like Amazon Mechanical Turk, which enables the task requesters to filter out low quality responses.
+        <p>&nbsp;</p> -->
+	<br/>
+	<p><a href="http://nyunetworks.com">Click</a> to go to main page of the Open Networks and Big Data Lab.</p>
+      </div>
+      
+      <br/><br/>
+      
+    </div>
+    
+    <div id="footer">
+      <!-- <a href="#"></a> -->
+      <p style="float:left;">©NYU Open Networks and Big Data Lab, 2016.</p>
+      <p style="float:right;">
+	<a href="http://www.nyu.edu">NYU</a> |
+	<a href="http://cims.nyu.edu">Courant</a> |
+	<a href="http://cs.nyu.edu">NYU CS</a>
+      </p>      
+    </div>
+      <!--
+	  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	  <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+	  <script type="text/javascript">
+	    $(document).ready(function(){
+	    $('.slider').slick({
+	    autoplay: true,
+	    dots: true,
+	    autoplaySpeed: 2500,
+	    });
+	    });
+	  </script>-->
+
+  </body>
+</html>

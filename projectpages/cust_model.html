@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Reputations, Preferences and Choices</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>Reputations, Preferences and Choices</h1>
+    </div>
+    
+    <div id="page">
+      
+      <!-- <div class="bar"> -->
+      <!--   <div class="link"><a href="http://nyunetworks.com/index.html">HOME</a></div> -->
+      <!-- </div> -->
+      
+      <hr/>
+      
+      <div class="contentText">
+        <br/><br/><br/>
+	  <!--Customer segmentation involves partitioning a heterogeneous group of customers with different preferences into homogeneous segments with similar preferences. The benefits of segmentation include identifying the hidden customer needs which can help in tailored product
+              offerings to better meet the particular needs of each segment.
+              Similarly, what products to carry and what prices to charge are important decisions faced by a firm as these decisions directly influence the purchase behavior of customers, and, therefore, the firm’s revenues and
+              gross profits. To effectively optimize its offerings, a firm must understand how its product and price
+              offerings jointly impact consumer demand. -->
+        <p>Understanding customer behavior and preferences is one of the most important challenges for any firm, and involves problems like customer segmentation, modeling and predicting consumer choices as well as determining the impact of assortments and prices on consumer demand. Many of these problems have become increasingly important in the current age of Big Data, where firms have the ability to collect granular individual-level data at various points of interaction with the customer, both online and offline. Availability of such granular data allows a firm to greatly benefit from micro-segmentation of customers, leading to micro-targeting in the form of personalized product offerings, promotions, and recommendations. The existing approaches in the marketing and operations literature are incapable of scaling to such large amounts of data. Further, the most popular approach is to use the Expectation Maximization (EM) algorithm to infer the latent characteristics of the customer population, and even though it performs really well in practice, it suffers from some fundamental issues like slow convergence, sensitivity to initialization as well as lacking any theoretical guarantees on the obtained solution. </p>
+	<br/>
+        <p>Our goal is to propose alternative techniques for solving these problems that address some of the existing limitations: (1) provable guarantees on the quality of the obtained solution (2) robust to modeling assumptions and (3) fast and scalable to large amounts of data. Some of our techniques are inspired by recent work in the machine learning literature on large-scale and sparse optimization.</p>
+          
+	<br/>
+	<p> Past work includes the design of a novel reputation system for crowd workers that is robust to manipulation and can help boost the accuracy of crowdsourced labeling tasks by filtering out unreliable and/or adversarial workers.</p>
+	<br/><br/>
+      </div>
+      
+      <div class="figure">
+        <img src="cust_model.jpg" alt="Banner Image" height="100%" width="90%"/>
+      </div>
+      
+      <div class="contentTitle"><h1>Drafts & Publications</h1></div>
+      <div class="contentText">
+        
+        <p><b><a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2696161">A Data-Driven Approach to Customer Segmentation</a></b></p>
+        <p>Segmenting customers based on their preferences is a fundamental marketing problem. The current practice for segmentation relies on estimating the parameters of a mixture model using Expectation-Maximization (EM) based methodologies. The EM-based methodologies are not consistent, are sensitive to initialization, and exhibit slow numerical convergence. To address these issues, we propose a data-driven segmentation methodology that directly segments customers, without the need for estimating latent model parameters. Our approach relies on a 'model-based' projection technique, inspired by the recent projection-based techniques developed in the machine learning community for learning mixture models. Our approach is versatile (broadly applicable) and flexible (allows for incorporation of problem-specific structure). Theoretically, we derive separation conditions under standard assumptions that are required to guarantee asymptotic recovery of the underlying segments. Empirically, we demonstrate using synthetic data that our algorithm is fast, robust to model misspecification, and consistently outperforms popular benchmarks. Using real-world data, we characterize the segments recovered by our algorithm and demonstrate an automatic feature selection mechanism, which results in sharper separation of the segments than existing benchmarks.</p>
+        <br/>
+	<p><b><a href="http://papers.nips.cc/paper/5393-reputation-based-worker-filtering-in-crowdsourcing.pdf">Reputation-based Worker Filtering in Crowdsourcing</a></b></p>
+	<p>In this paper, we study the problem of aggregating noisy labels from crowd workers
+	  to infer the underlying true labels of binary tasks. Unlike most prior work
+	  which has examined this problem under the random worker paradigm, we consider
+	  a much broader class of adversarial workers with no specific assumptions on their
+	  labeling strategy. Our key contribution is the design of a computationally efficient
+	  reputation algorithm to identify and filter out these adversarial workers in crowdsourcing
+	  systems. Our algorithm uses the concept of optimal semi-matchings
+	  in conjunction with worker penalties based on label disagreements, to assign a
+	  reputation score for every worker. We provide strong theoretical guarantees for
+	  deterministic adversarial strategies as well as the extreme case of sophisticated
+	  adversaries where we analyze the worst-case behavior of our algorithm. Finally,
+	  we show that our reputation algorithm can significantly improve the accuracy of existing label aggregation algorithms in real-world crowdsourcing datasets.</p>
+      </div>
+      
+      <div class="contentTitle"><h1>People</h1></div>
+      <div class="contentText">
+	<ul>
+	  <li><p>Ashwin Venkataraman</p></li>
+	  <li><p>Srikanth Jagabathula</p></li>
+	  <li><p>Lakshminarayanan Subramanian</p></li>
+	</ul>
+	<p>&nbsp;</p>
+      </div>
+      
+      <!-- CHANGE OR REMOVE FUNDING AS NEEDED.-->
+      <!--/div-->
+      
+    </div>
+
+
+    <div id="footer">
+      <!-- <a href="#"></a> -->
+      <p style="float:left;">©NYU <a href="http://nyunetworks.com/index.html">Open Networks and Big Data Lab</a>, 2016.</p>
+      <p style="float:right;">
+	<a href="http://www.nyu.edu">NYU</a> |
+	<a href="http://cims.nyu.edu">Courant</a> |
+	<a href="http://cs.nyu.edu">NYU CS</a>
+      </p>      
+    </div>
+        
+  </body>
+</html>

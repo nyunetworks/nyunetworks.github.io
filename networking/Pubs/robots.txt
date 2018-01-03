@@ -1,0 +1,47 @@
+# 
+# This restricts access to only known and registered robots. 
+#
+
+#Modified by Daniel - took out all whitelisted bots, we can
+#add blacklists here and in web server if needed...
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /systems/platforms/linux/software/package/
+#page fragments included by CMS
+#Disallow: /webapps/page_body/
+#Disallow: /webapps/page_title/
+#Staging server
+Disallow: /webapps-dev/
+Allow: /pipermail/cvc-users
+Allow: /pipermail/smt-lib
+Allow: /pipermail/smt-comp
+Allow: /pipermail/fom
+Disallow: /pipermail/
+
+#Added 2015/11/25 by NF
+#Do not crawl Django Admin site
+Disallow: /dynamic/admin/
+
+#Added 2015/11/25 by NF
+Disallow: /archive201511/
+
+#Added 2015/11/24 by NF
+#CS website has moved from /web/ to /home/
+Allow: /web/
+Allow: /webapps/
+
+#Added 2016/03/03 by NF. See Ticket#2016030210001058.
+Disallow: /cs/review/
+
+#Added 2015/06/09
+#Google Search Appliance seems to abuse classroom calendar.
+Disallow: /webapps/classrooms/
+
+# I believe the following will eliminate many of the 404's that result from
+# crawling javascript such as 
+# var AUTH_TOKEN = 'm0IBKGTI83RXdNSm25OtcWWCyfDE6SLQWkkBosLVvmA=';
+Disallow: /*=$
+
+User-agent: AhrefsBot
+Crawl-Delay: 2
+

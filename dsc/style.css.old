@@ -1,0 +1,171 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) */
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #697281;
+  background-image: url('images/congruent_outline2.png');
+	text-align: left;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #F1F5F8;
+	background-color:#2A2A2A;
+}
+*
+{
+  margin: 0 auto 0 auto;
+ text-align:left;}
+
+
+/* A Free Design by Bryant Smith (bryantsmith.com) */
+
+html, body {
+text-align: center;
+}
+p {text-align: left;}
+
+
+
+
+
+#page
+{
+  margin: 0 auto 0 auto; 
+  margin-top:0px;
+  display: block; 
+  height:auto;
+  position: relative; 
+  overflow: hidden; 
+  background: url(images/background.png) repeat-y;
+  width: 1000px;
+}
+
+#header
+{
+background-image:url(images/header.png);
+background-repeat:no-repeat;
+margin-top:50px;
+height:120px;
+width:1000px;
+}
+
+#header h1
+{
+position:relative;
+left:30px;
+top:25px;
+color:#4f328f;
+text-align:left;
+font-size:36px;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+margin-left:175px;
+width:750px;
+}
+
+#bar
+{
+height:45px;
+width:940px;
+background: #4f328f;
+line-height:45px;
+margin-top:20px;
+padding-left:20px;
+padding-right:20px;
+}
+
+#bar .link
+{
+float:left;
+text-decoration:none;
+height:55px;
+}
+
+
+#bar a
+{
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+color:#ffffff;
+margin-left:27px;
+margin-right:27px;
+}
+
+#bar a:hover
+{
+color:#999999;
+}
+
+.contentTitle
+{
+width:850px;
+height:37px;
+margin-top:20px;
+margin-left:25px;
+margin-right:25px;
+margin-bottom:10px;
+}
+
+.contentTitle h1
+{
+margin-left:50px;
+padding-top:8px;
+font-size:20px;
+font-weight:bold;
+color:#071027;
+}
+
+.comments
+{
+font-size:11px;
+font-style:italic;
+}
+
+.contentText
+{
+width:850px;
+padding-left:80px;
+padding-right:100px;
+font-size:16px;
+color:#666666;
+line-height:21px;
+letter-spacing:-1px;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.contentText h1
+{
+font-size:16px;
+font-weight:bold;
+text-decoration: underline;
+}
+
+a
+{
+text-decoration:none;
+color:#2A2A2A;
+border-bottom:1px dashed #2A2A2A;
+}
+
+a:hover
+{
+color:#8F8F8F;
+border-bottom:1px dotted #2A2A2A;
+}
+
+
+#footer {
+width: 738px;
+height:53px;
+text-align:center;
+font-size:9px;
+color:#2A2A2A;
+padding-top:25px;
+}
+

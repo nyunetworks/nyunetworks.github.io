@@ -1,0 +1,6 @@
+{
+  "name": "Contextual Computing for Type-1 Diabetes",
+  "tagline": "Using smartphones to support diabetes care and analysis",
+  "body": "# Diabetes Care\r\nType-1 Diabetes is a chronic illness affecting an estimated 3-million americans. Attentive regulation of blood glucose is needed to avoid dangerous and potentially deadly side effects. Our research aims to offload some of this management work to mobile applications and web-based analytical tools; making use of a combination of contextual information, continuous glucose monitoring (CGM) technology, and machine learning.\r\n\r\n# Technology for Metabolic Health and Understanding\r\nType-1 diabetes is an important environment for learning how to improve blood glucose inference using contextual information, but there are also many potential applications for type-2 diabetics, athletes, and health conscious individuals in general.\r\n\r\n### Blood Glucose Imputation\r\n![Blood Glucose Imputation](http://somatostat.in/images/bsugar.png)\r\n\r\n### Identifying events of interest  \r\n![Blood Glucose Imputation](http://somatostat.in/images/clusts.png)",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

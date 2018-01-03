@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>A New Networking Stack For Mobile</title>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>A New Networking Stack For Mobile</h1>            
+    </div>
+    <div id="page">
+      
+      <!-- <div class="bar"> -->
+      <!--   <div class="link"><a href="http://nyunetworks.com/index.html">HOME</a></div> -->
+      <!-- </div> -->
+      
+      <hr/>
+      
+      <div class="contentText">
+        <br/><br/><br/>
+        <p> Mobile devices are becoming the most pervasively available source to access the Internet. In spite of technological and economic advancements, fundamental problems related to web access still remain. The increasing complexity of web-pages most often translates to increased page-load time (PLT), the foremost challenge to the academic community in this space. Though well-studied (with a plethora of solutions and implementations) across many years, we argue that the status quo is insufficient. We advocate thechanges modelled on inter-layer dependenices (or the lack of them), building on the various optimizations considered across the layers independently. The main aim of our architecture is to operate in a conservative manner, utilizing reduced network and compute resources, by making alterations at various levels of the network stack. Through this new framework, we wish to achieve our primary goal of reduced PLT.</p>
+        <br/><br/><br/>
+      </div>
+      
+      <div class="figure">
+	<img src="../networking/images/cover.jpg" alt="Banner Image" height="100%" width="90%"/>
+      </div>
+      
+      <div class="contentTitle"><h1>Drafts & Publications</h1></div>
+      <div class="contentText">
+        
+        <p><b><a href="http://conferences.sigcomm.org/sigcomm/2015/pdf/papers/p509.pdf">Adaptive Congestion Control for Unpredictable Cellular Networks</a></b></p>
+        <p>Legacy congestion controls including TCP and its variants are known to perform poorly over cellular networks due to highly variable capacities over short time scales, self-inflicted packet delays, and packet losses unrelated to congestion. To cope with these challenges, we present Verus, an end-to-end congestion control protocol that uses delay measurements to react quickly to
+	  the capacity changes in cellular networks without explicitly attempting to predict the cellular channel dynamics. The key idea of Verus is to continuously learn a delay profile that captures the relationship between end-to-end packet delay and outstanding window size over short epochs and uses this relationship to increment or decrement the window size based on the observed short-term packet delay variations. </p>
+
+        <p>&nbsp;</p>
+        <p><b><a href="https://cs.nyu.edu/~lakshmi/Lakshmi/Pubs/TAQ-Enhancing%20Fairness%20and%20Performance%20Predictability%20in%20Small%20Packet%20Regimes.pdf">TAQ: Enhancing Fairness and Performance Predictability in Small Packet Regimes</a></b></p>
+        <p>TCP congestion control algorithms implicitly assume that the per-flow throughput is at least a few packets per round trip time. Environments where this assumption does not hold, which we refer to as small packet regimes, are common in the contexts of wired and cellular networks in developing regions. In this paper we show that in small packet regimes TCP flows experience severe unfairness, high packet loss rates, and flow silences due to repetitive timeouts. We propose an approximate Markov model to describe TCP behavior in small packet regimes to characterize the TCP breakdown
+	  region that leads to repetitive timeout behavior. To enhance TCP performance in such regimes, we propose Timeout Aware Queuing (TAQ), a readily deployable in-network middlebox approach that uses a multi-level adaptive priority queuing algorithm to reduce the probability of timeouts, improve fairness and performance predictability.</p>
+        
+
+        <p>&nbsp;</p>
+        <!-- <p><b><a href="">Model-driven Delay-based Congestion Control for Cellular Networks</a></b></p> -->
+        <p><b><a href="http://nyunetworks.com/Pubs/modelDrivenCC.pdf">Model-driven Delay-based Congestion Control for Cellular Networks</a></b></p>
+        <p>In this paper, we develop a new stochastic two-dimensional discrete-time Markov modeling approach that dramatically simplifies the understanding of delay-based congestion control protocols. This model allows us to analyze a protocol’s behavior and to replicate its analysis under different network scenarios. We use the Verus congestion control protocol as a case study to demonstrate that the model’s performance matches that of Verus. The modeling approach developed in this paper is extensible to a variety of different settings and protocols. We describe the central elements that a designer should specify to achieve comparable performance with other delay-based congestion control protocols.</p>
+        
+
+      </div>
+      
+      <div class="contentTitle"><h1>Past Projects</h1></div>
+      <div class="contentText">
+        <p>&nbsp;</p>
+        <p><b><a href="http://cs.nyu.edu/~lakshmi/webstack/index.html">Web for Emerging Regions</a></b> (old web page)</p>
+        <p>The World Wide Web is largely unusable or prohibitively slow for a majority of users in the developing world due to poor connectivity. The conventional model for Web access is fundamentally ill-suited for emerging regions due to four basic challenges. In contrast to connectivity, Web pages have grown in size and complexity over the past decade. The average web page size has grown roughly by a factor of 40-50 in the last decade. Addressing the Web access problem has been a large-scale initiative and several Masters and PhD students have worked on different parts of this project.</p>
+        
+      </div>
+      
+      <div class="contentTitle"><h1>People</h1></div>
+      <div class="contentText">
+        <ul>
+          <li><p>Talal Ahmad</p></li>
+          <li><p>Thomas Potsch</p></li>
+          <li><p>Ali Raza</p></li>
+          <li><p>Yasir Zaki</p></li>
+          <li><p>Varun Chandrasekaran</p></li>
+          <li><p>Jay Chen</p></li>
+          <li><p>Lakshminarayanan Subramanian</p></li>
+        </ul>
+        <p>&nbsp;</p>
+      </div>
+    </div>
+    
+
+    <div id="footer">
+      <!-- <a href="#"></a> -->
+      <p style="float:left;">©NYU <a href="http://nyunetworks.com/index.html">Open Networks and Big Data Lab</a>, 2016.</p>
+      <p style="float:right;">
+	<a href="http://www.nyu.edu">NYU</a> |
+	<a href="http://cims.nyu.edu">Courant</a> |
+	<a href="http://cs.nyu.edu">NYU CS</a>
+      </p>      
+    </div>
+
+  </body>
+</html>

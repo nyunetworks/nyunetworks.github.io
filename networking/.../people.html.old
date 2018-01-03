@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../nbd/style.css" />
+<title>Open Networks Lab - People</title>
+</head>
+
+<body>
+     <div id="header">
+       <a href="http://www.nyu.edu"><img src="images/logo.jpg" align="middle" /> </a>
+       <h1><a href="index.html">Open Networks Lab</a></h1>
+     </div>
+    <div id="page">
+		
+  <div class="bar">
+        	  <div class="link"><a href="index.html">HOME</a></div>
+            <div class="link"><a href="people.html">PEOPLE</a></div>
+            <div class="link"><a href="projects.html">PROJECTS</a></div>
+            <div class="link"><a href="publications.html">PUBLICATIONS</a></div>
+      </div>
+  
+        <div class="contentTitle"><h1>Faculty:</h1></div>
+        <div class="contentText">
+          <p style="float:left;text-align:center;width:20.7%;margin-right:6%;margin-bottom:0.5em">
+          <img src="images/lakshmi.jpg" width="90%" height="20%" alt="Banner Image"/><a href= "http://cs.nyu.edu/~lakshmi/Lakshmi/Home.html"> Lakshminarayanan Subramanian</a><br> (Group Lead)</p>
+          
+         
+          <p style="clear:both"></p>
+        </div>
+        <div class="contentTitle"><h1>Researchers:</h1></div>
+        <div class="contentText">
+          
+          <p style="float:left;text-align:center;width:20%;margin-right:4%;margin-bottom:0.5em">
+          <img src="https://www.atp.com.au/Images/UserUploadedImages/376/NICTA-PhD_Yan_article.JPG" height="200" width="200" alt="Banner Image"/><a href= "https://scholar.google.com/citations?user=6KLTk_cAAAAJ&hl=en">
+          Yan Shvartzshnaider </a><br> (NYU)</p>
+ 
+          <p style="float:left;text-align:center;width:20%;margin-right:4%;margin-bottom:0.5em">
+          <img src="http://cs.nyu.edu/~lakshmi/webstack/images/yasir.png" height="200" width="200" alt="Banner Image"/><a href= "http://http://yasirzaki.net/">
+          Yasir Zaki </a><br> (NYU Abu Dhabi)</p>
+
+          <p style="float:left;text-align:center;width:20%;margin-right:4%;margin-bottom:0.5em">
+          <img src="https://pbs.twimg.com/profile_images/460105275513393153/lXNr7GKg.jpeg" height="200" width="200" alt="Banner Image"/><br/><a href= "http://cs.nyu.edu/~ahmad">
+          Talal Ahmad </a><br/>(NYU)</p>
+        </div>
+ 
+
+
+        <div class="contentText">
+        
+          <p style="float:left;text-align:center;width:20%;margin-right:4%;margin-bottom:0.5em">
+          <img src="images/Shiva_Pic.JPG" height="200" width="200" alt="Banner Image"/><br/><a href= "http://cs.nyu.edu/~siyer/home.html">
+          Shiva Iyer </a><br/>(NYU)</p>
+          
+          <p style="float:left;text-align:center;width:20%;margin-right:4%;margin-bottom:0.5em">
+          <img src="http://s22.postimg.org/skelqzaxd/Full_Size_Render.jpg" height="200" width="200" alt="Banner Image"/><a href= "http://cs.nyu.edu/~vc1113">
+          Varun Chandrasekaran </a><br>(NYU)</p>
+
+          <p style="float:left;text-align:center;width:20%;margin-right:4%;margin-bottom:0.5em">
+          <img src="https://www.lclark.edu/live/image/gid/7/width/300/height/600/42625_sam_royston.jpg" height="200" width="200" alt="Banner Image"/><br/><a href= "http://cs.nyu.edu/~lakshmi/Lakshmi/Home.html">
+          Sam Royston </a><br>(NYU)</p>
+
+          
+          <p style="clear:both"></p>
+        </div>
+        
+        
+        <div class="contentTitle"><h1>Alumni:</h1></div>
+        <div class="contentText">
+            <p>Postdocs:</p>
+            </br>            
+            <p>Shankar Kalyanaraman (Facebook)</p>
+            <p>Esther Ezra (Georgia Tech)</p>
+            <p>Vincent Toubiana (DPA France)</p>
+            
+            </br></br></br>
+            <p>PhD:</p>
+            </br>
+            <p>Jay Chen (NYU Abu Dhabi)</p>
+            <p>Nguyen Tran</p>
+            <p>Sherman Chow (CUHK)</p>
+            <p>Michael Paik (NYU Abu Dhabi)</p>
+            <p>Ashlesh Sharma (Entrupy)</p>
+            <p>Matt Tierney (Google)</p>
+            <p>Russell Power (Iodine)</p>
+            <p>Aditya Dhananjay (NYU-CS)</p>
+           
+            </br></br></br>
+            <p>PhD Students (@ UC-Berkeley):</p>
+            </br>
+            <p>Sergiu Nedevschi (Tarana Wireless) </p>
+            <p>Rabin Patra (Tarana Wireless) </p>
+            <p>Sonesh Surana (Optimizely)</p>
+            
+            </br></br></br>
+            <p>Masters:</p>
+            </br>
+            <p>Rachid Ennaji (NVIDIA)</p>
+            <p>Meredith J. Hasson </p>
+            <p>Trishank Karthik Kuppusamy</p>
+            <p>Faiz Kazi</p>
+            <p>Brendan Linn (Google)</p>
+            <p>Sindhura Chava (Barclays Capital)</p>
+            <p>Laura Dan Li (Anthro-Tech, Inc.)</p>
+            <p>Ariel Nevarez </p>
+            <p>Nahanaeli Schelling</p>
+            <p>Lu Wei-Chih</p>
+            <p>Ruchi Tandon (Google)</p>
+            <p>Renfei Zou (IBM Watson)</p>
+            <p>&nbsp;</p>
+            
+        </div>
+        
+</div>
+        <div id="footer"><a href="#"></a></div>
+</body>
+</html>
