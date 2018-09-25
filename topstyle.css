@@ -1,0 +1,405 @@
+/* A Free Design by Bryant Smith (bryantsmith.com) */
+
+html, body {
+    text-align: center;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #697281;
+    background-image: url('images/congruent_outline2.png');
+    text-align: left;
+    font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    color: #F1F5F8;
+    background-color:#2A2A2A;
+}
+
+* {
+    margin: 0 auto 0 auto;
+    text-align:left;
+}
+
+a {
+    text-decoration:none;
+    color:#2A2A2A;
+    border-bottom:1px dashed #2A2A2A;
+}
+
+a:hover {
+    color:#8F8F8F;
+    border-bottom:1px dotted #2A2A2A;
+}
+
+
+#page {
+    display: block; 
+    height:auto;
+    position: relative; 
+    overflow: hidden; 
+    background: url(images/background.png) repeat-y;
+    width: 1000px;
+}
+
+#header {
+    background-color:#ffffff;
+    background-repeat:no-repeat;
+    margin-top:10px;
+    height:120px;
+    width:1000px;
+}
+
+#header h1 {
+    text-align:center;
+    color:#4f328f;
+    font-size:36px;
+    font-weight:bold;
+    font-family:"Trebuchet MS", Helvetica, Arial, sans-serif;
+    padding-top:50px;
+    padding-left:25px;
+}
+
+#header h1 a {
+    text-decoration:none;
+    color:#4f328f;
+    border:none;
+}
+
+#header h1 a:hover {
+    text-decoration:none;
+    color:#4f328f;
+    border:none;
+}
+
+
+#header img {
+    display:block;
+    left:0px;
+    padding-left:20px;
+    float:left;
+    /* margin-top: 10px; */
+    /* padding-top:20px; */
+    /* width:200px; */
+    width:120px;
+    height:120px;
+}
+
+
+.mainsubtitle {
+    height:70px;
+    width:940px;
+    float:center;
+    vertical-align:middle;
+    padding:10px;
+}
+
+.mainsubtitle h1 {
+    color:#505050;
+    text-align:center;
+    font-size:48px;
+    font-weight:bold;
+    font-style:italic;
+    font-family:times;
+}
+
+.colorbox {
+    width:100px;
+    height:100px;
+    background:black;
+    vertical-align:middle;
+    color:white;
+}
+
+.bar
+{
+    height:45px;
+    width:1000px;
+    /* background: #4f328f; */
+    background: #666666;
+    line-height:45px;
+    margin-top:10;
+    padding-left:20;
+    padding-right:20;
+}
+
+.bar .link
+{
+    float:left;
+    text-decoration:none;
+    height:55px;
+}
+
+
+.bar a {
+    font-size:14px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#ffffff;
+    margin-left:27px;
+    margin-right:27px;
+    border:none;
+}
+
+.bar a:hover {
+    color:#999999;
+}
+
+/*** For dropdown menu on the main page. ***/
+.dropbtn {
+    /* background-color: #4CAF50; */
+    background-color: inherit;
+    color: white;
+    /* padding: 16px; */
+    /* font-size: 16px; */
+    font-family: inherit;
+    border: none;
+    cursor: pointer;
+    /* height:55px; */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    /* width: 150%; */
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    /* padding: 12px 16px; */
+    /* text-decoration: none; */
+    display: block;
+}
+
+.dropdown-content a:hover {color: #999999}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    /* background-color: #3e8e41; */
+    color: #999999;
+}
+/*** For dropdown menu on the main page. ***/
+
+
+.contentTitle {
+    height:37px;
+    margin-top:20px;
+    margin-left:25px;
+    margin-right:25px;
+    margin-bottom:10px;
+}
+
+.contentTitle h1 {
+    margin-left:50px;
+    padding-top:8px;
+    font-size:24px;
+    font-weight:bold;
+    color:#071027;
+}
+
+.contentTitle h2 {
+    margin-left:50px;
+    padding-top:8px;
+    font-size:18px;
+    font-weight:bold;
+    color:#404040;
+}
+
+
+.comments {
+    font-size:11px;
+    font-style:italic;
+    color:black;
+    text-align:center;
+}
+
+.contentText {
+    width:850px;
+    padding-left:80px;
+    padding-right:100px;
+    font-size:16px;
+    color:#666666;
+    line-height:21px;
+    letter-spacing:-1px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.contentText p {
+    text-align:justify;
+}
+
+.contentText h1 {
+    font-size:16px;
+    font-weight:bold;
+    text-decoration: underline;
+}
+
+.contentText #ppl {
+    float:left;
+    text-align:center;
+    width:20%;
+    height:300px;
+    margin-right:4%;
+    margin-bottom:0.5em;
+    font-size:12pt;
+}
+
+.figure {
+    width: 100%;
+    float: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #F0FFFF;
+}
+
+.newsbox {
+    /* background-color: #F0F0F0; */
+    padding-top:10px;
+    padding-bottom:10px;
+    float: center;
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* .contentText marquee { */
+/*     background-color:#E0E0E0; */
+/* } */
+
+/* .newsbox { */
+/*     height:100; */
+/*     background-color:#E0E0E0; */
+/* } */
+
+/* .news { */
+/*     position:relative; */
+/*     -webkit-animation:newsmarquee 5s infinite; */
+/*     animation:newsmarquee 5s infinite; */
+/* } */
+
+/* .news:hover { */
+/*     -webkit-animation-play-state: paused; */
+/*     animation-play-state: paused; */
+/* } */
+
+/* @-webkit-keyframes newsmarquee { */
+/*     from {bottom: 0px} */
+/*     to {top: 100px} */
+/* } */
+
+/* @keyframes newsmarquee { */
+/*     from {bottom: 0px} */
+/*     to {top: 100px} */
+/* } */
+
+
+/* For the diagram on the main page. */
+.tree ul {
+  position: relative;
+  padding: 1em 0;
+  white-space: nowrap;
+  margin: 0 auto;
+  text-align: center;
+}
+.tree ul::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.tree li {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 1em .5em 0 .5em;
+}
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 1em;
+}
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+.tree li:only-child {
+  padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 1em;
+}
+
+.tree li a {
+  border: 1px solid #ccc;
+  padding: .5em .75em;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  color: #333;
+  position: relative;
+  top: 1px;
+}
+
+.tree li a:hover,
+.tree li a:hover + ul li a {
+  background: #e9453f;
+  color: #fff;
+  border: 1px solid #e9453f;
+}
+
+.tree li a:hover + ul li::after,
+.tree li a:hover + ul li::before,
+.tree li a:hover + ul::before,
+.tree li a:hover + ul ul::before {
+  border-color: #e9453f;
+}
+/*** For the diagram on the main page. ***/
+
+
+#footer {
+    width: 738px;
+    height:53px;
+    text-align:center;
+    font-size:12px;
+    color:#2A2A2A;
+    padding-top:25px;
+}
