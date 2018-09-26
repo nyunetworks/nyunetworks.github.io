@@ -1,0 +1,6 @@
+encoding: UTF-8
+exclude:
+  - ./**/*.jpg
+  - ./**/*.png
+  - ./**/*.pdf
+
