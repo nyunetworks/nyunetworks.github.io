@@ -228,13 +228,13 @@ a:hover {
 
 .contentText {
     width:850px;
-    padding-left:80px;
-    padding-right:100px;
-    font-size:16px;
+    padding-left:0px;
+    padding-right:0px;
+    font-size:18px; /* previously 16px */
     color:#666666;
-    line-height:21px;
-    letter-spacing:-1px;
-    font-family: Helvetica, Arial, sans-serif;
+    line-height:26px; /* previously 21px */
+    letter-spacing:0px; /* previously -1px */
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 .contentText p {
