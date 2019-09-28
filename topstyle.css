@@ -230,7 +230,7 @@ a:hover {
     width:850px;
     padding-left:0px;
     padding-right:0px;
-    font-size:18px; /* previously 16px */
+    font-size:16px;
     color:#666666;
     line-height:26px; /* previously 21px */
     letter-spacing:0px; /* previously -1px */
