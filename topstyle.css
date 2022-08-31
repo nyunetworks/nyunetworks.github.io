@@ -293,6 +293,8 @@ a:hover {
     float: center;
     width: 100%;
     border: 1px solid black;
+    height: 100px;
+    overflow-y:auto;
 }
 
 /* .contentText marquee { */
