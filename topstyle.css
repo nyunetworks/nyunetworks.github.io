@@ -341,6 +341,12 @@ a:hover {
     overflow-y:auto;
 }
 
+#ppl {
+    height: 150;
+    width: 150;
+    object-fit: cover;
+}
+
 /* .container{
     padding-right: 15px;
     padding-left: 15px;
