@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ML + Econ | Strategic Collaborative Learning</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Override Primary Color -->
+  <style>
+    /* Override background and text color for primary utilities */
+    .bg-primary {
+        background-color: #57068C !important;
+    }
+
+    .text-primary {
+        color: #57068C !important;
+    }
+
+    .btn-primary {
+        background-color: #57068C !important;
+        border-color: #57068C !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #5a32a3 !important;
+        border-color: #5a32a3 !important;
+    }
+
+    .border-primary {
+        border-color: #57068C !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Project Display -->
+  <header class="bg-primary text-white py-4">
+    <div class="container">
+      <h1 id="display-title" class="h2 mb-0">Mechanism design for collaborative learning with strategic agents.</h1>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5">
+      <h2 class="h4 border-bottom pb-2 text-primary">Motivation</h2>
+      <p id="display-motivation">
+        Imagine a world where many intelligent agents—like robots, apps, or recommendation systems—are all trying
+        to learn how to make better decisions by interacting with the same environment. 
+        Each one explores and observes the environment on its own, and share what they learn to help each other 
+        improve—self-driving cars learning from each other's experiences, mobile apps adapting to users’ preferences by pooling data,
+         or online platforms recommending products more effectively by collaborating across different user groups. 
+        This project is about designing and understanding such collaborative learning systems.
+        <br>
+        However, when agents are independent and have different capabilities, it’s not obvious how or why they would choose to 
+        cooperate—or how to fairly split the benefits.
+        This project develops a way to analyze such scenarios through the lens of game theory. 
+      </p>
+    </section>
+
+    <section class="mb-5">
+      <!-- <h2 class="h4 border-bottom pb-2 text-primary text-center">Project Images</h2> -->
+      <div class="row text-center">
+        <div class="col-md-6 mb-4">
+          <img id="display-image1" src="resources/strategic_agents/fruit-cart-free-riding.png" alt="Project Image 1" class="img-fluid rounded shadow-sm mb-2" style="max-height: 300px;">
+          <p id="display-caption1" class="text-muted fst-italic">How should fruits of labour be shared when contributions differ?</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <img id="display-image2" src="resources/strategic_agents/robotic-interactions.png" alt="Project Image 2" class="img-fluid rounded shadow-sm mb-2" style="max-height: 300px;">
+          <p id="display-caption2" class="text-muted fst-italic">When autonomous agents interact amongst themselves, how does rationality impact collaboration?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h4 border-bottom pb-2 text-primary">Results / Contributions</h2>
+      <div id="display-results">
+        <p>
+        We ask and try to answer the following questions:
+         Which groups should form? Will everyone want to work together? 
+         How should the benefits of collaboration be shared? 
+         By using ideas from game theory and machine learning, we show that collaboration can be stable,
+         beneficial, and fair—even when agents are quite different. 
+         Our results offer insights for building more cooperative, efficient, and intelligent systems.
+         </p>
+         <br>
+         <div class="table-responsive d-flex justify-content-center">
+          <table class="table table-sm table-bordered table-striped text-center align-middle" style="width: 50%;">
+            <thead class="table-light">
+              <tr>
+                <th>Method</th>
+                <th>Accuracy</th>
+                <th>Speed (ms)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Our Model</td>
+                <td>90%</td>
+                <td>10</td>
+              </tr>
+              <tr>
+                <td>Baseline A</td>
+                <td>80%</td>
+                <td>30</td>
+              </tr>
+              <tr>
+                <td>Baseline B</td>
+                <td>70%</td>
+                <td>20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        [More results, tables, plots etc.]
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h4 border-bottom pb-2 text-primary">Members</h2>
+      <ol id="display-team" class="list-styled">
+        <li>Ramakrishnan K., PhD student, NYU.</li>
+        <li>Arpit A., IIT Bombay.</li>
+        <li>Lakshmi S., NYU.</li>
+        <li>Maximilian N., Meta.</li>
+      </ol>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h4 border-bottom pb-2 text-primary">Publications</h2>
+      <ol id="display-publications" class="list-styled">
+        <li class="mb-2">Ramakrishnan, K., et al. 
+            <i>"Collaborative Learning under Strategic Behavior: 
+                Mechanisms for Eliciting Feedback in Principal-Agent Bandit Games."</i>
+                Agentic Markets Workshop at ICML 2024. <a href="https://openreview.net/pdf?id=MNRcrm9K1b">(PDF)</a>
+          </li>
+        <li>[Authors] <i>[Paper title]</i> [Venue] <a href="#">(PDF)</a></li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+    &copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences | Department of Computer Science, New York University.
+  </footer>
+
+  <hr>
+
+  <!-- Input Form for Live Preview -->
+  <div class="container my-5">
+    <h3 class="text-primary mb-4">[Debug] Try Out Your Project Content</h3>
+
+    <form id="preview-form">
+      <div class="mb-3">
+        <label for="input-title" class="form-label">Project Title</label>
+        <input type="text" class="form-control" id="input-title" placeholder="" />
+      </div>
+
+      <div class="mb-3">
+        <label for="input-motivation" class="form-label">Motivation</label>
+        <textarea class="form-control" id="input-motivation" rows="3" placeholder=""></textarea>
+      </div>
+
+      <h5 class="text-primary mt-4">Results / Contributions</h5>
+      <div class="mb-3">
+        <label for="input-results" class="form-label">Results Paragraph (HTML allowed)</label>
+        <textarea class="form-control" id="input-results" rows="4" placeholder=""></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="input-team" class="form-label">Team (one per line)</label>
+        <textarea class="form-control" id="input-team" rows="3" placeholder=""></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="input-publications" class="form-label">Publications (one per line, HTML allowed)</label>
+        <textarea class="form-control" id="input-publications" rows="4" placeholder="[Authors]. <i>[Title]</i>. [Venue]. <a href=[url]> PDF </a> "></textarea>
+      </div>
+
+      <!-- Image 1 -->
+      <h5 class="text-primary mt-4">Image/gif 1</h5>
+      <div class="mb-3">
+        <label for="input-image1-url" class="form-label">Image 1 URL</label>
+        <input type="text" class="form-control" id="input-image1-url" />
+      </div>
+      <div class="mb-3">
+        <label for="input-image1-file" class="form-label">Upload Image 1</label>
+        <input type="file" class="form-control" id="input-image1-file" accept="image/*" />
+      </div>
+      <div class="mb-3">
+        <label for="input-caption1" class="form-label">Caption for Image 1</label>
+        <input type="text" class="form-control" id="input-caption1" placeholder="Description or caption for image 1" />
+      </div>
+
+      <!-- Image 2 -->
+      <h5 class="text-primary mt-4">Image/gif 2</h5>
+      <div class="mb-3">
+        <label for="input-image2-url" class="form-label">Image 2 URL</label>
+        <input type="text" class="form-control" id="input-image2-url"  />
+      </div>
+      <div class="mb-3">
+        <label for="input-image2-file" class="form-label">Upload Image 2</label>
+        <input type="file" class="form-control" id="input-image2-file" accept="image/*" />
+      </div>
+      <div class="mb-3">
+        <label for="input-caption2" class="form-label">Caption for Image 2</label>
+        <input type="text" class="form-control" id="input-caption2" />
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="updatePreview()">Try It</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Live Preview Script -->
+  <script>
+    function updatePreview() {
+      const title = document.getElementById("input-title").value;
+      const motivation = document.getElementById("input-motivation").value;
+      const team = document.getElementById("input-team").value;
+      const publications = document.getElementById("input-publications").value;
+
+      document.getElementById("display-title").textContent = title;
+      document.getElementById("display-motivation").textContent = motivation;
+
+      // Parse team members
+      const teamList = team.split("\n").filter(line => line.trim() !== "");
+      const teamHTML = teamList.map(member => `<li>${member}</li>`).join("");
+      document.getElementById("display-team").innerHTML = teamHTML;
+
+      // Parse publications (HTML allowed)
+      const pubList = publications.split("\n").filter(line => line.trim() !== "");
+      const pubHTML = pubList.map(pub => `<li>${pub}</li>`).join("");
+      document.getElementById("display-publications").innerHTML = pubHTML;
+
+      // Parse Results/Contributions.
+      const results = document.getElementById("input-results").value;
+      document.getElementById("display-results").innerHTML = results;
+
+      // Image 1
+      const imageFile1 = document.getElementById("input-image1-file").files[0];
+      const imageUrl1 = document.getElementById("input-image1-url").value;
+      const caption1 = document.getElementById("input-caption1").value;
+
+      if (imageFile1) {
+        const reader1 = new FileReader();
+        reader1.onload = function (e) {
+          document.getElementById("display-image1").src = e.target.result;
+        };
+        reader1.readAsDataURL(imageFile1);
+      } else if (imageUrl1) {
+        document.getElementById("display-image1").src = imageUrl1;
+      }
+
+      document.getElementById("display-caption1").textContent = caption1;
+
+      // Image 2
+      const imageFile2 = document.getElementById("input-image2-file").files[0];
+      const imageUrl2 = document.getElementById("input-image2-url").value;
+      const caption2 = document.getElementById("input-caption2").value;
+
+      if (imageFile2) {
+        const reader2 = new FileReader();
+        reader2.onload = function (e) {
+          document.getElementById("display-image2").src = e.target.result;
+        };
+        reader2.readAsDataURL(imageFile2);
+      } else if (imageUrl2) {
+        document.getElementById("display-image2").src = imageUrl2;
+      }
+
+      document.getElementById("display-caption2").textContent = caption2;
+
+    }
+  </script>
+</body>
+</html>
