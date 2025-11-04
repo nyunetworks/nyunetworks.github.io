@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ML + Sustainability</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Override Primary Color -->
+  <style>
+    /* Override background and text color for primary utilities */
+    .bg-primary {
+        background-color: #57068C !important;
+    }
+
+    .text-primary {
+        color: #57068C !important;
+    }
+
+    .btn-primary {
+        background-color: #57068C !important;
+        border-color: #57068C !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #5a32a3 !important;
+        border-color: #5a32a3 !important;
+    }
+
+    .border-primary {
+        border-color: #57068C !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Project Display -->
+  <header class="bg-primary text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 id="display-title" class="h2 mb-0">Machine Learning + Sustainability</h1>
+      <div><a href="/index.html" class="text-white">Open Networks and Big Data Lab</a></div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Problem Motivation</h2>
+      <p id="display-motivation">
+        Cities—especially across the Global South—face two intertwined challenges with outsized impact on public health and productivity:
+      degraded air quality and chronic road congestion. High-fidelity sensors and infrastructure-heavy control systems are costly and sparse,
+      leaving large blind spots. Our work closes these gaps using infrastructure-light methods that turn commodity data (phone/CCTV images,
+      sparse air sensors, and coarse mobility datasets) into fine-grained maps and proactive controls that cities can deploy today.
+        <ul>
+        <li><strong>Public health:</strong> Hidden pollution hotspots disproportionately affect vulnerable communities and remain invisible to coarse monitoring.</li>
+        <li><strong>Mobility & productivity:</strong> Sudden jams can emerge without obvious bottlenecks; reactive fixes arrive too late and often require expensive upgrades.</li>
+        <li><strong>Practicality:</strong> Methods must operate on what cities already have—phones, CCTVs, a handful of sensors, and open data.</li>
+        </ul>
+      </p>
+    </section>
+    
+
+    <section class="mb-5">
+      <!-- <h2 class="h4 border-bottom pb-2 text-primary text-center">Project Images</h2> -->
+      <div class="row text-center">
+        <div class="col-md-6 mb-4">
+          <img id="display-image1" src="resources/sustainability/pollution.png" alt="Project Image 1" class="img-fluid rounded shadow-sm mb-2" style="max-height: 300px;">
+          <!-- <p id="display-caption1" class="text-muted fst-italic">Pollution</p> -->
+        </div>
+        <div class="col-md-6 mb-4">
+          <img id="display-image2" src="resources/sustainability/traffic.png" alt="Project Image 2" class="img-fluid rounded shadow-sm mb-2" style="max-height: 300px;">
+          <!-- <p id="display-caption2" class="text-muted fst-italic">Traffic</p> -->
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h2 border-bottom pb-2 text-primary">Results and Contributions</h2>
+      <!-- A. Pollution -->
+      <h3><a class="h4 pb-2 text-primary" href="https://sites.google.com/view/ankitbhardwaj/Projects/air-pollution-monitoring">A. Scalable Urban Air Pollution Monitoring</a></h3>
+
+      <ol>
+        <li> <h4 class="h6 pb-2">Vision-based sensing from mobile & CCTV images</h4>
+            <ul>
+                <li>Trained interpretable ML models that estimate PM2.5 from everyday images (haze as a physically meaningful proxy), enabling real-time, location-aware phone/CCTV sensing.</li>
+                <li>Accuracy: image model MAE <strong>44&nbsp;µg/m³</strong>, improving to <strong>35&nbsp;µg/m³</strong> via distributed averaging; in-interval accuracy reaches <strong>74%</strong> despite noisy labels and limited data.</li>
+                <li>Coverage impact: combined with sensor data, the augmented network revealed <strong>189</strong> previously undetected hotspots, affecting <strong>&gt;150,000</strong> residents beyond public monitor coverage.</li>
+            </ul>
+        </li>
+        <li> <h4 class="h6 pb-2">Interpolation over sparse sensor networks</h4>
+            <ul>
+                <li>Built space-time interpolation (e.g., Space-Time Kriging) to infer pollution at unmonitored locations/times.</li>
+                <li>Robustness: monthly hotspot prediction achieves <strong>95% precision</strong> and <strong>88% recall</strong> with <strong>50%</strong> simulated sensor failure; tolerant to label noise and device drift.</li>
+                <li>Mechanistic insight: a companion model explains <strong>65%</strong> of transient hotspots, highlighting policy-relevant drivers.</li>
+            </ul>
+        </li>
+        <li> <h4 class="h6 pb-2">Unified city-scale pipeline</h4>
+            <p>
+                Vision estimates densify spatial coverage; interpolation refines them into calibrated city-wide maps—yielding decision-grade hotspot surfaces from commodity imagery plus a sparse backbone of monitors.
+            </p>
+        </li>
+      </ol>
+      
+
+    <div class="table-responsive d-flex justify-content-center">
+        <table class="table table-sm table-bordered table-striped text-center align-middle" style="width: 70%;">
+        <thead class="table-light">
+            <tr>
+            <th>Metric</th>
+            <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>Image MAE → with distributed averaging</td>
+            <td>44&nbsp;µg/m³ → <strong>35&nbsp;µg/m³</td>
+            </tr>
+            <tr>
+            <td>In-interval accuracy</td>
+            <td>74%</td>
+            </tr>
+            <tr>
+            <td>Hotspot detection (50% sensor failure)</td>
+            <td>95% precision / 88% recall</td>
+            </tr>
+            <tr>
+            <td>Newly revealed hotspots (residents impacted)</td>
+            <td>189</strong> (&gt;<strong>150k</strong>)</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!-- B. Traffic -->
+    <h3><a class="h4 pb-2 text-primary" href="https://sites.google.com/view/ankitbhardwaj/Projects/vehicular-traffic-management">B. Understanding & Mitigating Traffic Jams</a></h3>
+
+      <ol>
+        <li> <h4 class="h6 pb-2">Characterizing sudden traffic jams</h4>
+            <ul>
+                <li>Introduced and formally defined “sudden jams” arising from short, intense bursts; constructed “traffic curves” from coarse sources (loop detectors, Uber Movement) across New York City, Nairobi, and São Paulo.</li>
+                <li>Cross-city finding: Nairobi exhibits significantly longer jam durations per road segment than NYC and São Paulo, indicating management gaps and under-utilized capacity.</li>
+            </ul>
+        </li>
+        <li> <h4 class="h6 pb-2">Reinforcement learning for congestion control (infrastructure-free)</h4>
+            <ul>
+                <li>Framed freeway management as a centralized, physics-informed RL problem that modulates target speeds to smooth flows without adding infrastructure.</li>
+                <li>Simulation on real road networks shows: <strong>+5% throughput</strong>, <strong>−13% average delay</strong>, and up to <strong>−5% total stops</strong> versus baselines.</li>
+                <li>Integration: jam characterization informs RL policies about where, when, and how aggressively to intervene.</li>
+            </ul>
+        </li>
+      </ol>
+
+      <div class="table-responsive d-flex justify-content-center">
+        <table class="table table-sm table-bordered table-striped text-center align-middle" style="width: 50%;">
+        <thead class="table-light">
+            <tr>
+            <th>Throughput</th>
+            <th>Average Delay</th>
+            <th>Total stops</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>+5%</td>
+            <td>-13%%</td>
+            <td>-5%</td>
+            </tr>
+        </tbody>
+        </table>
+    </div>
+
+    <!-- Connecting thread -->
+    <h3 class="h4 pb-2 text-primary">How do they connect?</h3>
+      <p>
+        Both projects convert low-cost signals into high-value city intelligence. Pollution mapping fuses commodity imagery and sparse sensors into dense,
+        actionable risk surfaces; traffic modeling turns coarse mobility data into proactive control. The common thread is
+        <strong>scalable sensing + robust modeling</strong> that cities can deploy now.
+      </p>
+  </section>
+
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Members</h2>
+      <ol id="display-team" class="list-styled">
+        <li><a href="https://sites.google.com/view/ankitbhardwaj/home">Ankit Bhardwaj </a>, NYU.</li>
+        <li>Shiva Iyer, NYU.</li>
+        <li>Anant Balashankar, NYU.</li>
+        <!-- <li>Talal Ahmad, NYU.</li> -->
+        <!-- <li>Lakshmi Subramanian, NYU.</li> -->
+      </ol>
+    </section>
+
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Publications</h2>
+      <h4 class="h4 pb-2 text-primary">Air Pollution</h4>
+      <ol id="display-publications" class="list-styled">
+        <li class="mb-2">A. Bhardwaj, S. Iyer, Y. Jalan, L. Subramanian. 
+            <i>"Learning Pollution Maps from Mobile Phone Images."</i>
+                IJCAI 2022, AI for Good Track.  <a href="https://www.ijcai.org/proceedings/2022/0697.pdf">(PDF)</a> <a href="https://github.com/ankitbha/pollution_with_images"> (Code) </a>
+        </li>
+        <li class="mb-2">A. Bhardwaj, A. Balashankar, S. Iyer, N. Soans, A. Sudarshan, R. Pande, L. Subramanian.
+            <i>"Comprehensive Monitoring of Air Pollution Hotspots Using Sparse Sensor Networks."</i>
+                ACM Journal on Computing and Sustainable Societies, 2025. <a href="https://dl.acm.org/doi/pdf/10.1145/3748821">(PDF)</a> <a href="https://github.com/ankitbha/hidden_hotspots"> (Code) </a>
+        </li>
+      </ol>
+      <h4 class="h4 pb-2 text-primary">Traffic</h4>
+      <ol id="display-publications" class="list-styled">
+        <li class="mb-2">A. Bhardwaj*, S. Iyer*, S. Ramesh, J. White, L. Subramanian. 
+            <i>"Understanding Sudden Traffic Jams: From Emergence to Impact. "</i>
+                Development Engineering: Journal of Engineering in Economic Development, 2023.  <a href="https://www.sciencedirect.com/science/article/pii/S2352728522000148">(PDF)</a>
+        </li>
+        <li class="mb-2">A. Bhardwaj, R. Asim, S. Chauhan, Y. Zaki, L. Subramanian.
+            <i>"Self-Regulating Cars: Automating Traffic Control in Free Flow Road Networks."</i>
+                ACM Journal on Computing and Sustainable Societies, 2025. <a href="https://arxiv.org/pdf/2506.11973">(PDF)</a> <a href="https://github.com/rohailasim123/Self-Regulating-Cars"> (Code) </a>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+    &copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences | Department of Computer Science, New York University.
+  </footer>
+
+</body>
+</html>

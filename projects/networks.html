@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ML + Networks</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Override Primary Color -->
+  <style>
+    /* Override background and text color for primary utilities */
+    .bg-primary {
+        background-color: #57068C !important;
+    }
+
+    .text-primary {
+        color: #57068C !important;
+    }
+
+    .btn-primary {
+        background-color: #57068C !important;
+        border-color: #57068C !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #5a32a3 !important;
+        border-color: #5a32a3 !important;
+    }
+
+    .border-primary {
+        border-color: #57068C !important;
+    }
+  </style>
+</head>
+<body>
+<!-- Project Display -->
+<header class="bg-primary text-white py-4">
+<div class="container d-flex justify-content-between align-items-center">
+      <h1 id="display-title" class="h2 mb-0">Machine Learning + Networks</h1>
+      <div><a href="/index.html" class="text-white">Open Networks and Big Data Lab</a></div>
+    </div>
+</header>
+
+<main class="container my-5">
+
+<!-- /////////////////////////////////////////// -->
+ <!-- MOTIVATION -->
+ <section class="mb-5">
+    <h2 class="h4 border-bottom pb-2 text-primary">Problem Motivation</h2>
+    <p id="display-motivation">
+        The transition to 5G and beyond has transformed the design landscape of wireless systems, demanding unprecedented throughput, consistency, and latency guarantees. 
+        Traditional congestion control protocols—originally tailored for wired networks—struggle to cope with the fast-varying, high-capacity, short-timescale dynamics characteristic of mobile and edge networks.
+        This bottleneck directly impacts next-generation applications that depend on ultra-reliable low-latency communication (URLLC), such as multi-user immersive reality (MIR), telepresence, and autonomous systems.
+        <br> <br>
+        To bridge this gap, our lab’s research re-examines congestion control and rate adaptation from two complementary angles:
+        <ol>
+          <li>
+            <strong>System-level re-engineering:</strong> enabling new transport mechanisms deployable in real 5G environments without kernel changes or infrastructural overhaul.
+          </li>
+          <li>
+            <strong>Application-aware adaptation:</strong> integrating quality-of-experience (QoE)-driven rate control within AR/VR and real-time streaming frameworks to support interactive, multi-user experiences.
+          </li>
+        </ol>
+        Together, these efforts define a holistic vision for intelligent, adaptive, and deployable network systems that can meet the demands of next-generation wireless applications.
+    </p>
+</section>
+
+<section class="mb-5">
+<!-- <h2 class="h4 border-bottom pb-2 text-primary text-center">Project Images</h2> -->
+<div class="row text-center">
+<div class="col-md-6 mb-4">
+    <img id="display-image1" src="resources/networks/5g-arch.png" alt="Project Image 1" class="img-fluid rounded shadow-sm mb-2" style="max-height: 400px;">
+    <p id="display-caption1" class="text-muted fst-italic">ALCC + Zeus integrated benchmarking architecture</p>
+</div>
+<div class="col-md-6 mb-4">
+    <img id="display-image2" src="resources/networks/rohail-hera.png" alt="Project Image 2" class="img-fluid rounded shadow-sm mb-2" style="max-height: 300px;">
+    <p id="display-caption2" class="text-muted fst-italic">5G Edge AI components</p>
+</div>
+</div>
+</section>
+
+<!-- RESULTS -->
+<section class="mb-5">
+  <h2 class="h3 border-bottom pb-2 text-primary">Results and Contributions</h2>
+  <!-- Subsection 1 -->
+  <h3> <a class="h4 pb-2 text-primary" href="https://www.rohailasim.com/project/zeus">A. Application-Layer Congestion Control (ALCC) and Zeus Benchmarking Toolkit</a></h3>
+  <p>
+    Our first line of work focuses on rethinking the deployment and evaluation of congestion control algorithms
+    for emerging mobile networks. <strong>ALCC</strong> enables application-layer congestion control over
+    existing TCP tunnels—allowing 5G-ready optimization without kernel modifications—while
+    <strong>Zeus</strong> provides a unified benchmarking environment to evaluate congestion control algorithms
+    under both real and emulated 5G conditions.
+  </p>
+  <p>
+    Together, these frameworks demonstrate that user-space implementations can achieve up to
+    <strong>97% of native TCP performance</strong>, supporting server-only deployment for CCAs like Verus and
+    Copa, and enabling detailed fairness and coexistence analysis.
+  </p>
+
+  <table class="table table-bordered my-4">
+    <thead class="table-light">
+      <tr>
+        <th>Metric</th>
+        <th>Key Outcome</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Throughput vs. Delay</td>
+        <td>90–97% of native performance from user space</td>
+      </tr>
+      <tr>
+        <td>Deployment</td>
+        <td>Zero client-side modification required</td>
+      </tr>
+      <tr>
+        <td>Comparison</td>
+        <td>BBR balanced; Cubic/Reno excel in throughput; Copa/Vivace in latency</td>
+      </tr>
+      <tr>
+        <td>Benchmarking</td>
+        <td>Side-by-side fairness and harm analysis across 10 CCAs</td>
+      </tr>
+    </tbody>
+  </table>
+
+<section class="mb-5">
+<!-- <h2 class="h4 border-bottom pb-2 text-primary text-center">Project Images</h2> -->
+<div class="row text-center">
+<div class="mb-4">
+    <img id="display-image2" src="resources/networks/5g-results.png" alt="Hera Performance Results" class="img-fluid rounded shadow-sm mb-2" style="max-height: 600px;">
+    <p id="display-caption2" class="text-muted fst-italic">Results</p>
+</div>
+</div>
+</section>
+
+  <!-- Subsection 2 -->
+  <h3> <a class="h4 pb-2 text-primary" href="https://www.rohailasim.com/project/extendedreality">B. Hera Framework for Next-Generation Immersive Applications</a></h3>
+  <p>
+    Building on the above, the <strong>Hera framework</strong> extends congestion-aware design to the
+    application layer of AR/VR systems, bridging real-time multimedia streaming and network-level adaptation.
+    Hera integrates a QoE-aware delay-based rate control protocol with an adaptive streaming and synchronization
+    layer designed for multi-user immersive environments.
+  </p>
+  <p>
+    It achieves up to <strong>66% lower latency</strong>, <strong>50% higher average bitrate</strong>, and
+    consistent <strong>4K multi-user streaming</strong> under high-mobility 5G conditions.
+  </p>
+
+  <table class="table table-bordered my-4">
+    <thead class="table-light">
+      <tr>
+        <th>Metric</th>
+        <th>Improvement over Baseline</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Latency</td>
+        <td>66% reduction</td>
+      </tr>
+      <tr>
+        <td>Bitrate</td>
+        <td>+50% average improvement</td>
+      </tr>
+      <tr>
+        <td>Fairness Index</td>
+        <td>0.965</td>
+      </tr>
+      <tr>
+        <td>Visual Quality</td>
+        <td>Consistent 4K multi-user experience</td>
+      </tr>
+    </tbody>
+  </table>
+
+<section class="mb-5">
+<div class="row text-center">
+<div class="mb-4">
+    <img id="display-image2" src="resources/networks/hera-plots.png" alt="Hera Performance Results" class="img-fluid rounded shadow-sm mb-2" style="max-height: 500px;">
+    <p id="display-caption2" class="text-muted fst-italic">Hera performance highlights in multi-user 5G scenarios</p>
+</div>
+</div>
+</section>
+
+ <section class="mb-5">
+    <div class="row text-center">
+    <!-- <div class="col-md-6 mb-4">
+        <img id="display-image1" src="resources/networks/hera-flowchart.png" alt="Project Image 1" class="img-fluid rounded shadow-sm mb-2" style="max-height: 300px;">
+        <p id="display-caption1" class="text-muted fst-italic">Hera worlfklow</p>
+    </div> -->
+    <div class="col-md-6 mb-4">
+        <img id="display-image1" src="resources/networks/hera-low.gif" alt="Project Image 1" class="img-fluid rounded shadow-sm mb-2 equal-img" style="max-height: 300px;">
+        <p id="display-caption1" class="text-muted fst-italic">Low quality and high latency. (Not actual gameplay footage)</p>
+    </div>
+    <div class="col-md-6 mb-4">
+        <img id="display-image2" src="resources/networks/hera-optimized.gif" alt="Hera Performance Results" class="img-fluid rounded shadow-sm mb-2 equal-img" style="max-height: 300px;">
+        <p id="display-caption2" class="text-muted fst-italic">Optimized. (Not actual gameplay footage)</p>
+    </div>
+    </div>
+  </section>
+
+  <!-- Subsection 3 -->
+  <h3 class="h4 font-semibold mt-6 mb-2">3. Broader Impact</h3>
+  <p>
+    These projects collectively demonstrate a path toward deployable, adaptive, and fair network systems that
+    extend beyond traditional protocol design to encompass user experience and system integration layers.
+    The frameworks are being adopted in broader testbeds for next-generation immersive communication research,
+    showcasing how practical innovation and theoretical rigor can converge within real-world environments.
+  </p>
+</section>
+
+<!-- MEMBERS -->
+
+<section class="mb-5">
+    <h2 class="h4 border-bottom pb-2 text-primary">Members</h2>
+    <ol id="display-team" class="list-styled">
+    <li><a href='https://www.rohailasim.com/'>Rohail Asim</a>, NYU Abu Dhabi.</li>
+    <li>Shiva Iyer, NYU.</li>
+    <li>Talal Ahmad, NYU.</li>
+    <li>Lakshmi Subramanian, NYU.</li>
+    <li>Yasir Zaki, NYU Abu Dhabi.</li>
+    </ol>
+</section>
+
+<!-- PUBLICATIONS -->
+<section class="mb-5">
+    <h2 class="h4 border-bottom pb-2 text-primary">Publications</h2>
+    <ol id="display-publications" class="list-styled">
+    <li class="mb-2">Rohail Asim, Muhammad Khan, Luis Diez, Shiva Iyer, Ramon Aguero, Lakshmi Subramanian, Yasir Zaki,
+        <i>"ZEUS: An Experimental Toolkit for Evaluating Congestion Control Algorithms in 5G Environments."</i>
+            Arxiv <a href="https://arxiv.org/abs/2208.13985">(PDF)</a>
+    </li>
+    <li>Yasir Zaki, Rohail Asim, Muhammad Khan, Shiva Iyer, Talal Ahmad, Thomas Potsch, Lakshmi Subramanian.<i>"ALCC: Migrating Congestion Control to the Application Layer in Cellular Networks."
+        </i> Journal of Systems Research - May 2021 
+        <a href="https://openreview.net/forum?id=moVPhXtxQo7">(PDF)</a>
+    </li>
+    </ol>
+</section>
+
+
+
+<!-- /////////////////////////////////////////// -->
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+&copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences | Department of Computer Science, New York University.
+</footer>
+
+<style>
+  .equal-img {
+    height: 300px;         /* fixed equal height */
+    width: 100%;           /* maintain responsive width */
+    object-fit: cover;     /* crop to fill area while keeping proportions */
+  }
+</style>
+
+</body>
+</html>
