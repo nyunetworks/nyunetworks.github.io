@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ML + Biomedical Sciences | Open Networks & Big Data Lab</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Override Primary Color -->
+  <style>
+    /* Override background and text color for primary utilities */
+    .bg-primary {
+        background-color: #57068C !important;
+    }
+
+    .text-primary {
+        color: #57068C !important;
+    }
+
+    .btn-primary {
+        background-color: #57068C !important;
+        border-color: #57068C !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #5a32a3 !important;
+        border-color: #5a32a3 !important;
+    }
+
+    .border-primary {
+        border-color: #57068C !important;
+    }
+    
+    .publication-list li {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .contribution-item {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .contribution-item:last-child {
+        border-bottom: none;
+    }
+    
+    .method-highlight {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-left: 3px solid #57068C;
+        margin: 1rem 0;
+    }
+    
+    .badge-custom {
+        background-color: #57068C;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-primary text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 id="display-title" class="h2 mb-0">Machine Learning + Biomedical Sciences</h1>
+      <div><a href="/index.html" class="text-white">Open Networks and Big Data Lab</a></div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- Problem Motivation Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Focus</h2>
+      <p class="lead">
+        Developing robust machine learning methods to extract meaningful biological insights from noisy, sparse, and high-dimensional biomedical data.
+      </p>
+      <p>
+        Our research develops robust machine learning methods to extract meaningful biological insights from challenging biomedical data across two primary areas. In single-cell genomics, we tackle extreme sparsity (over 90% zero values), technical noise from dropout events, and the inherent difficulty of distinguishing true biological signals from technical artifacts in scRNA-seq data. In clinical imaging, we address the challenge of learning from imprecise medical annotations to achieve high-precision lesion detection and segmentation. Both research directions combine statistical rigor with domain-specific interpretability to advance biomedical discovery and clinical applications.
+      </p>
+      
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Gene Regulatory Networks</h5>
+              <p class="card-text">Inferring causal regulatory relationships between transcription factors and target genes from noisy single-cell data</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Zero Imputation</h5>
+              <p class="card-text">Distinguishing biological zeros from technical dropouts while preserving genuine expression patterns</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Clinical Imaging</h5>
+              <p class="card-text">Learning from imprecise medical annotations to identify lesions and boundaries with high precision</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Key Methods & Contributions -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Key Methods & Contributions</h2>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">BEACON: Bayesian Contrastive Learning for Gene Regulatory Network Inference</h4>
+        <span class="badge badge-custom mb-2">NeurIPS Workshop AI4D3 2025</span>
+        <p>
+          A novel method for inferring gene regulatory networks from static scRNA-seq data that addresses the fundamental challenges of sparsity and noise through a principled combination of three key components:
+        </p>
+        <ul>
+          <li><strong>Asymmetric Dual Embeddings:</strong> Separate source and target embeddings capture the directional nature of regulatory relationships (TF → gene), enabling the model to distinguish regulators from targets.</li>
+          <li><strong>Soft Nearest Neighbor Contrastive Learning:</strong> Brings embeddings of known regulatory pairs closer while pushing non-regulatory pairs apart, learning robust representations despite noise.</li>
+          <li><strong>Gaussian Process Bayesian Scoring:</strong> Provides calibrated probability scores with uncertainty quantification, crucial for prioritizing experimental validation.</li>
+        </ul>
+        <div class="method-highlight">
+          <strong>Key Results:</strong> Achieves 97.24% AUROC on SERGIO-simulated E. coli networks and maintains competitive performance across BEELINE benchmarks with ChIP-seq and perturbation validation. Ablation studies confirm all three components are essential for performance.
+        </div>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Consensus-Based Zero Imputation for scRNA-seq</h4>
+        <span class="badge bg-secondary mb-2">Under Review</span>
+        <p>
+          Addresses the critical challenge of zero-inflation in single-cell data through a conservative ensemble approach that preserves biological zeros while recovering technical dropouts:
+        </p>
+        <ul>
+          <li><strong>Multi-Method Consensus:</strong> Only imputes zeros when multiple independent methods agree, reducing false positive imputations that can distort biological signals.</li>
+          <li><strong>Iterative Marker-Gene Refinement:</strong> Uses known cell-type markers to guide imputation, iteratively improving confidence thresholds while maintaining conservative standards.</li>
+          <li><strong>Empirical Validation:</strong> Comprehensive analysis across nine Crohn's disease datasets reveals substantial disagreement among existing methods (concordance often below 70%).</li>
+        </ul>
+        <div class="method-highlight">
+          <strong>Key Results:</strong> 91.4% of tested marker genes show improved F1 scores. The iterative algorithm converges in 4 iterations, increasing matrix density from 9% to 28% while preserving cell-type identities.
+        </div>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Transcription Factor Cascade Compendium</h4>
+        <span class="badge badge-custom mb-2">Genes 2025</span>
+        <p>
+          A comprehensive knowledge graph of transcription factor regulatory cascades assembled from multiple curated sources, enabling systematic analysis of regulatory pathways:
+        </p>
+        <ul>
+          <li>Integrates tens of thousands of TF→TF regulatory relationships from literature and databases</li>
+          <li>Graph machine learning identifies high-influence transcription factors linked to disease pathways</li>
+          <li>Provides a framework for drug target nomination and hypothesis generation</li>
+        </ul>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">LatentCADx: Precision Medical Imaging with Imprecise Annotations</h4>
+        <span class="badge badge-custom mb-2">Frontiers in Big Data 2021</span>
+        <p>
+          Joint classification and segmentation framework that learns from coarse clinical annotations to identify lesions with high precision, addressing the reality of imperfect medical labeling.
+        </p>
+      </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Publications</h2>
+      <ol class="publication-list">
+        <li>
+          <em>"BEACON: Bayesian Contrastive Learning for Single-Cell Gene Regulatory Inference."</em><br>
+          Yunwei Zhao, Ankit Bhardwaj, Lakshminarayanan Subramanian.<br>
+          NeurIPS Workshop on AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development (AI4D3), 2025.<br>
+          <a href="https://openreview.net/forum?id=cVXvMshEFr" class="btn btn-sm btn-outline-primary mt-1">OpenReview</a>
+        </li>
+        
+        <li>
+          <em>"Signal-to-Noise Recovery in scRNA-seq Datasets."</em><br>
+          Yunwei Zhao, Lakshminarayanan Subramanian.<br>
+          Under Review, 2025.<br>
+          <span class="badge bg-secondary">Preprint Available</span>
+        </li>
+        
+        <li>
+          <em>"Limitations of scRNA-seq Zero-Imputation Methods for Network Inference."</em><br>
+          Ankit Bhardwaj, Joshua Weiner, Preetha Balasubramanian, Lakshminarayanan Subramanian.<br>
+          ICML Workshop on Machine Learning for Life and Material Science: From Theory to Industry Applications (ML4LMS), 2024.<br>
+          <a href="https://openreview.net/forum?id=VAOlHfzIUh" class="btn btn-sm btn-outline-primary mt-1">OpenReview</a>
+        </li>
+        
+        <li>
+          <em>"Generation of a Compendium of Transcription Factor Cascades and Identification of Potential Therapeutic Targets using Graph Machine Learning."</em><br>
+          Sonish Sivarajkumar, Pratyush Tandale, Ankit Bhardwaj, Kipp W. Johnson, Anoop Titus, Benjamin S. Glicksberg, Shameer Khader, Kamlesh K. Yadav, Lakshminarayanan Subramanian.<br>
+          Genes, 2025.<br>
+          <a href="https://arxiv.org/abs/2311.17969" class="btn btn-sm btn-outline-primary mt-1">arXiv</a>
+        </li>
+        
+        <li>
+          <em>"High Precision Mammography Lesion Identification from Imprecise Medical Annotations (LatentCADx)."</em><br>
+          Ulzee An, Ankit Bhardwaj, Khader Shameer, Lakshminarayanan Subramanian.<br>
+          Frontiers in Big Data, 2021.<br>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8716325/" class="btn btn-sm btn-outline-primary mt-1">PMC</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Team Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Team</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Lab Members</h5>
+          <ul>
+            <li>Yunwei Zhao - PhD Student, Courant Institute, NYU</li>
+            <li>Ankit Bhardwaj - PhD Student, Courant Institute, NYU</li>
+            <li>Lakshminarayanan Subramanian - Professor, Courant Institute, NYU</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5>Collaborators</h5>
+          <ul>
+            <li>Mount Sinai School of Medicine</li>
+            <li>Meta AI Research</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Software & Resources Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Software & Resources</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2"><strong>BEACON:</strong> GRN inference from scRNA-seq (Coming soon)</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+    <p class="mb-0">&copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences</p>
+    <p class="mb-0">Department of Computer Science, New York University</p>
+  </footer>
+
+  <!-- Bootstrap JS (optional, for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

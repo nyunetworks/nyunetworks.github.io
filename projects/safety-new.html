@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ML + Safety | Open Networks & Big Data Lab</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Override Primary Color -->
+  <style>
+    /* Override background and text color for primary utilities */
+    .bg-primary {
+        background-color: #57068C !important;
+    }
+
+    .text-primary {
+        color: #57068C !important;
+    }
+
+    .btn-primary {
+        background-color: #57068C !important;
+        border-color: #57068C !important;
+    }
+
+    .btn-primary:hover {
+        background-color: #5a32a3 !important;
+        border-color: #5a32a3 !important;
+    }
+
+    .border-primary {
+        border-color: #57068C !important;
+    }
+    
+    .publication-list li {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .contribution-item {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .contribution-item:last-child {
+        border-bottom: none;
+    }
+    
+    .reviewer-quote {
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-left: 3px solid #57068C;
+        margin: 1rem 0;
+        font-style: italic;
+    }
+    
+    .badge-custom {
+        background-color: #57068C;
+        color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-primary text-white py-4">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 id="display-title" class="h2 mb-0">Machine Learning + Safety</h1>
+      <div><a href="/index.html" class="text-white">Open Networks and Big Data Lab</a></div>
+    </div>
+  </header>
+
+  <main class="container my-5">
+    <!-- Research Focus Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Focus</h2>
+      <p class="lead">
+        Building systems that can reason about information flow and causality through formal verification, from privacy policies to software systems.
+      </p>
+      <p>
+        Our research develops formal methods and machine learning techniques to understand and verify how information flows through complex systems. We focus on bridging the gap between human-interpretable policies and machine-verifiable specifications, preserving ambiguity where necessary while enabling automated reasoning where possible. This work spans from analyzing legal privacy documents to ensuring AI systems follow specified constraints.
+      </p>
+    </section>
+    
+    <!-- Key Research Contributions -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Contributions</h2>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">The Privacy Quagmire: Where Computer Scientists and Lawyers May Disagree</h4>
+        <span class="badge badge-custom mb-2">HotNets '25 (Poster)</span>
+        <p>
+          Privacy policies dictate how systems handle user data, yet engineers struggle to verify compliance because policies use intentionally vague legal language. Current automated analyzers extract data practices using NLP but fail when policies say things like "share data for legitimate purposes" - terms that have no computational definition. This mismatch between legal flexibility and formal verification creates a fundamental barrier to automated compliance checking.
+        </p>
+        <p>
+          We identify four systematic challenges: vague terms, evolving terminology, exception patterns that appear contradictory, and external legal dependencies. We propose an approach that preserves this ambiguity, where we use LLMs to extract structured parameters and convert them to first-order logic while keeping vague conditions as explicit placeholders for human interpretation.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">In-Context Alignment at Scale: When More is Less</h4>
+        <span class="badge badge-custom mb-2">ICML 2025 Workshop</span>
+        <p>
+          Systematic study of LLMs' ability to adopt novel rules and facts purely via prompts as the number of behaviors increases. We find that accuracy degrades (often up to ~50%) with more in-context rules, and models exhibit emergence of "cheating" via superficial cues rather than true rule following. Introduces synthetic rule-following setups and NewNews dataset to evaluate belief updating and instruction fidelity.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Targeted Policy Recommendations using Outcome-aware Clustering</h4>
+        <span class="badge badge-custom mb-2">ACM COMPASS 2022</span>
+        <p>
+          Partially supervised segmentation that ties feature selection and distance to an outcome of interest. Balanced, near-homogeneous clusters enable cluster-level policy recommendations rather than one-size-fits-all. Applied to LSMS-ISA data for sub-Saharan Africa; surfaced policy heterogeneity invisible at population level.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Enhancing Neural Recommender Models through Domain-Specific Concordance</h4>
+        <span class="badge badge-custom mb-2">WSDM 2021</span>
+        <p>
+          Regularization framework to make recommenders obey expert-defined category mappings under within-category perturbations. Improved category-robustness distance (~101-126%) and accuracy (up to ~12%) on MovieLens, Last.fm, and MIMIC-III. Bridges embeddings with human-understandable rules for robust generalization.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Contra: Contrarian Statistics for Controlled Variable Selection</h4>
+        <span class="badge badge-custom mb-2">AISTATS 2021</span>
+        <p>
+          Mixture of two "contrarian" models (true vs. null-swapped) yields stronger FDR control when covariate models are misspecified. Maintains asymptotic power 1; more reliable p-values than calibrated HRTs; scalable to high dimensions/large n. Demonstrated on synthetic and genetic datasets with improved rigor and efficiency.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">VACCINE: Using Contextual Integrity for Data Leakage Detection</h4>
+        <span class="badge badge-custom mb-2">WWW 2019</span>
+        <p>
+          CI-based formalism decoupling flow extraction from policy enforcement in DLP systems. NLP-driven flow extraction + declarative policies compiled to operational SQL rules. Supports temporal/consent-aware rules; improved precision and expressivity on Enron email corpus.
+        </p>
+      </div>
+    </section>
+
+    <!-- Publications Section (Newest to Oldest) -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Publications</h2>
+      <ol class="publication-list">
+        <li>
+          <em>"The Privacy Quagmire: Where Computer Scientists and Lawyers May Disagree."</em><br>
+          Yunwei Zhao, Varun Chandrasekaran, Thomas Wies, Lakshminarayanan Subramanian.<br>
+          HotNets '25 (Poster), November 17-18, 2025, College Park, MD, USA.
+        </li>
+        
+        <li>
+          <em>"In-Context Alignment at Scale: When More is Less."</em><br>
+          Neelabh Madan, Lakshminarayanan Subramanian.<br>
+          ICML Workshop on Models of Human Feedback for AI Alignment, 2025.<br>
+          <a href="https://openreview.net/forum?id=IaL2J1eAbt" class="btn btn-sm btn-outline-primary mt-1">OpenReview</a>
+        </li>
+        
+        <li>
+          <em>"Targeted Policy Recommendations using Outcome-aware Clustering."</em><br>
+          Ananth Balashankar, Samuel Fraiberger, Eric M. Deregt, Marelize Görgens, Lakshminarayanan Subramanian.<br>
+          ACM COMPASS, 2022.<br>
+          <a href="https://dl.acm.org/doi/abs/10.1145/3530190.3534797" class="btn btn-sm btn-outline-primary mt-1">ACM DL</a>
+        </li>
+        
+        <li>
+          <em>"Enhancing Neural Recommender Models through Domain-Specific Concordance."</em><br>
+          Ananth Balashankar, Alex Beutel, Lakshminarayanan Subramanian.<br>
+          Web Search and Data Mining (WSDM), 2021.<br>
+          <a href="https://dl.acm.org/doi/10.1145/3437963.3441784" class="btn btn-sm btn-outline-primary mt-1">ACM DL</a>
+        </li>
+        
+        <li>
+          <em>"Contra: Contrarian Statistics for Controlled Variable Selection."</em><br>
+          Mukund Sudarshan, Aahlad Puli, Lakshminarayanan Subramanian, Sriram Sankararaman, Rajesh Ranganath.<br>
+          AISTATS, 2021.<br>
+          <a href="https://proceedings.mlr.press/v130/sudarshan21a.html" class="btn btn-sm btn-outline-primary mt-1">Proceedings</a>
+        </li>
+        
+        <li>
+          <em>"VACCINE: Using Contextual Integrity for Data Leakage Detection."</em><br>
+          Yan Shvartzshnaider, Zvonimir Pavlinovic, Ananth Balashankar, Thomas Wies, Lakshminarayanan Subramanian, Helen Nissenbaum, Prateek Mittal.<br>
+          World Wide Web Conference (WWW), 2019.<br>
+          <a href="https://cs.nyu.edu/~wies/publ/vaccine.pdf" class="btn btn-sm btn-outline-primary mt-1">PDF</a>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Research Team -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Team</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Lab Members</h5>
+          <ul>
+            <li>Yunwei Zhao - PhD Student, Courant Institute, NYU</li>
+            <li>Neelabh Madan - PhD Student, Courant Institute, NYU</li>
+            <li>Lakshminarayanan Subramanian - Professor, Courant Institute, NYU</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5>Collaborators</h5>
+          <ul>
+            <li>Thomas Wies - Professor, Courant Institute, NYU</li>
+            <li>Ananth Balashankar - Researcher</li>
+            <li>Mukund Sudarshan - Researcher</li>
+            <li>Varun Chandrasekaran - University of Illinois Urbana-Champaign</li>
+            <li>Helen Nissenbaum - Cornell Tech</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Software & Resources Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Software & Resources</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2">• <strong>Privacy Policy Knowledge System:</strong> FOL-based reasoning for privacy policy analysis</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
+    <p class="mb-0">&copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences</p>
+    <p class="mb-0">Department of Computer Science, New York University</p>
+  </footer>
+
+  <!-- Bootstrap JS (optional) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
