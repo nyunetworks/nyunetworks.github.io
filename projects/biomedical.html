@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ML + Biomedical Sciences</title>
+  <title>ML + Biomedical Sciences | Open Networks & Big Data Lab</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -32,11 +32,31 @@
     .border-primary {
         border-color: #57068C !important;
     }
+    
+    .publication-list li {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+    
+    .contribution-item {
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #e9ecef;
+    }
+    
+    .contribution-item:last-child {
+        border-bottom: none;
+    }
+    
+    .badge-custom {
+        background-color: #57068C;
+        color: white;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Project Display -->
+  <!-- Header -->
   <header class="bg-primary text-white py-4">
     <div class="container d-flex justify-content-between align-items-center">
       <h1 id="display-title" class="h2 mb-0">Machine Learning + Biomedical Sciences</h1>
@@ -45,100 +65,221 @@
   </header>
 
   <main class="container my-5">
+    <!-- Problem Motivation Section -->
     <section class="mb-5">
-      <h2 class="h3 border-bottom pb-2 text-primary">Problem Motivation</h2>
-      <p id="display-motivation">
-        The explosion of single-cell sequencing and large-scale medical imaging has created a
-        paradox: we have unprecedented data volume, but signals are noisy, incomplete, and
-        difficult to validate. Our lab builds robust machine learning systems that extract
-        <em>actionable</em> biological insight from imperfect data—focusing on gene regulatory
-        networks (GRNs), transcription factor (TF) cascades, and oncology imaging.
-    </p>
-    <ul>
-        <li><strong>Single-cell GRNs:</strong> scRNA-seq is sparse and noisy; many GRN methods degrade to near-random on realistic benchmarks. We aim to recover genuine, directional regulatory edges without fragile preprocessing.</li>
-        <li><strong>TF cascades at scale:</strong> Understanding how TFs regulate each other is central to disease pathways and drug targets, yet genome-scale maps remain fragmented.</li>
-        <li><strong>Clinical imaging realism:</strong> Radiology annotations are often coarse. Models must see beyond imprecise labels to find true lesions and boundaries.</li>
-    </ul>
-    <p>
-        Across these fronts, we combine <strong>Bayesian inference</strong>, <strong>contrastive representation learning</strong>,
-        and <strong>graph machine learning</strong> to deliver calibrated predictions, interpretable structure,
-        and practical performance on noisy, real-world data.
-    </p>
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Focus</h2>
+      <p class="lead">
+        Developing robust machine learning methods to extract meaningful biological insights from noisy, sparse, and high-dimensional biomedical data.
+      </p>
+      <p>
+        Our research develops robust machine learning methods to extract meaningful biological insights from challenging biomedical data across two primary areas. In single-cell genomics, we tackle extreme sparsity (over 90% zero values), technical noise from dropout events, and the inherent difficulty of distinguishing true biological signals from technical artifacts in scRNA-seq data. In clinical imaging, we address the challenge of learning from imprecise medical annotations to achieve high-precision lesion detection and segmentation. Both research directions combine statistical rigor with domain-specific interpretability to advance biomedical discovery and clinical applications.
+      </p>
+      
+      <div class="row mt-4">
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Gene Regulatory Networks</h5>
+              <p class="card-text">Inferring causal regulatory relationships between transcription factors and target genes from noisy single-cell data</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Zero Imputation</h5>
+              <p class="card-text">Distinguishing biological zeros from technical dropouts while preserving genuine expression patterns</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-primary">Clinical Imaging</h5>
+              <p class="card-text">Learning from imprecise medical annotations to identify lesions and boundaries with high precision</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     
+    <!-- Key Methods & Contributions -->
     <section class="mb-5">
-      <h2 class="h3 border-bottom pb-2 text-primary">Results and Contributions</h2>
-      <!-- A. Pollution -->
-      <ol>
-        <li><h4 class="h6 pb-2 text-primary">BEACON: Bayesian Contrastive Learning for GRN Inference</h4>
-        <ul>
-            <li><strong>Directional embeddings:</strong> dual heads (regulator/target) capture asymmetry of regulation.</li>
-            <li><strong>Contrastive training:</strong> aligns known TF→target pairs; pushes apart likely negatives.</li>
-            <li><strong>Bayesian edge scoring:</strong> Gaussian-process classifier outputs calibrated edge probabilities with quantified uncertainty.</li>
-            <li><strong>Impact:</strong> Competitive or superior performance on SERGIO-simulated and real scRNA-seq with ChIP/perturbation validation; ablations show all three components are essential.</li>
-        </ul>
-        </li><br>
-        <li><h4 class="h6 pb-2 text-primary">What Imputation Really Does: Limits of Zero-Imputation in scRNA-seq</h4>
-        <ul>
-            <li><strong>Finding:</strong> Different zero-imputation pipelines produce <em>drastically</em> different GRNs (very low Jaccard overlap) on the same datasets.</li>
-            <li><strong>Simulation evidence:</strong> Under known ground truth, common imputers fail to recover the true network reliably.</li>
-            <li><strong>Takeaway:</strong> Avoid fragile preprocessing; prefer uncertainty-aware, non-imputative models (e.g., BEACON) that learn directly from noisy counts.</li>
-        </ul>
-        </li><br>
-        <li>
-        <h4 class="h6 pb-2 text-primary">TF Cascades: A Graph ML Compendium</h4>
-        <ul>
-            <li><strong>Resource:</strong> Knowledge graph of tens of thousands of TF→TF paths assembled from curated sources.</li>
-            <li><strong>Analytics:</strong> Centrality and enrichment highlight high-influence TFs (e.g., cancer-linked) and candidate therapeutic pathways.</li>
-            <li><strong>Utility:</strong> A reusable backbone for hypothesis generation, drug target nomination, and integration with GRN inference outputs.</li>
-        </ul>
-        </li><br>
-        <li><h4 class="h6 pb-2 text-primary">LatentCADx: Precision Mammography from Imprecise Annotations</h4>
-        <ul>
-            <li><strong>Approach:</strong> Joint classification + segmentation with a strict containment penalty to respect coarse radiology marks while learning sharper lesion masks.</li>
-            <li><strong>Results:</strong> High ROC/AP for case classification and strong segmentation precision; markedly fewer “confused” pixels and crisper boundaries.</li>
-            <li><strong>Clinical value:</strong> Reliable lesion localization even when pixel-perfect labels are unavailable—aligned with real hospital data realities.</li>
-        </ul>
-        </li
-    </ol>
+      <h2 class="h3 border-bottom pb-2 text-primary">Key Methods & Contributions</h2>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">BEACON: Bayesian Contrastive Learning for Gene Regulatory Network Inference</h4>
+        <span class="badge badge-custom mb-2">NeurIPS Workshop AI4D3 2025</span>
+        <p>
+          A novel method for inferring gene regulatory networks from static scRNA-seq data that addresses the fundamental challenges of sparsity and noise through a principled combination of three key components. The method uses asymmetric dual embeddings where separate source and target embeddings capture the directional nature of regulatory relationships (TF → gene), enabling the model to distinguish regulators from targets. It employs soft nearest neighbor contrastive learning that brings embeddings of known regulatory pairs closer while pushing non-regulatory pairs apart, learning robust representations despite noise. Finally, Gaussian Process Bayesian scoring provides calibrated probability scores with uncertainty quantification, crucial for prioritizing experimental validation.
+        </p>
+        <p>
+          The method achieves 97.24% AUROC on SERGIO-simulated E. coli networks and maintains competitive performance across BEELINE benchmarks with ChIP-seq and perturbation validation. Ablation studies confirm all three components are essential for performance.
+        </p>
+      </div>
+
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Transcription Factor Cascade Compendium</h4>
+        <span class="badge badge-custom mb-2">Genes 2025</span>
+        <p>
+          A comprehensive knowledge graph of transcription factor regulatory cascades assembled from multiple curated sources, enabling systematic analysis of regulatory pathways. The compendium integrates tens of thousands of TF→TF regulatory relationships from literature and databases. Graph machine learning techniques identify high-influence transcription factors linked to disease pathways, providing a framework for drug target nomination and hypothesis generation.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Consensus-Based Zero Imputation for scRNA-seq</h4>
+        <span class="badge badge-custom mb-2">Ongoing</span>
+        <p>
+          Addresses the critical challenge of zero-inflation in single-cell data through a conservative ensemble approach that preserves biological zeros while recovering technical dropouts. The method employs multi-method consensus, only imputing zeros when multiple independent methods agree, reducing false positive imputations that can distort biological signals. It uses an iterative marker-gene refinement approach with known cell-type markers to guide imputation, iteratively improving confidence thresholds while maintaining conservative standards.
+        </p>
+        <p>
+          Comprehensive empirical validation across nine Crohn's disease datasets reveals substantial disagreement among existing methods, with concordance often below 70%. The approach shows that 91.4% of tested marker genes have improved F1 scores. The iterative algorithm converges in 4 iterations, increasing matrix density from 9% to 28% while preserving cell-type identities.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">Contra: Contrarian Statistics for Controlled Variable Selection</h4>
+        <span class="badge badge-custom mb-2">AISTATS 2021</span>
+        <p>
+          Mixture of two "contrarian" models (true vs. null-swapped) yields stronger FDR control when covariate models are misspecified. Maintains asymptotic power 1; more reliable p-values than calibrated HRTs; scalable to high dimensions/large n. Demonstrated on synthetic and genetic datasets with improved rigor and efficiency.
+        </p>
+      </div>
+      
+      <div class="contribution-item">
+        <h4 class="h5 text-primary">LatentCADx: Precision Medical Imaging with Imprecise Annotations</h4>
+        <span class="badge badge-custom mb-2">Frontiers in Big Data 2021</span>
+        <p>
+          Joint classification and segmentation framework that learns from coarse clinical annotations to identify lesions with high precision, addressing the reality of imperfect medical labeling.
+        </p>
+      </div>
     </section>
 
-    <section class="mb-5">
-      <h2 class="h3 border-bottom pb-2 text-primary">Members</h2>
-      <ol id="display-team" class="list-styled">
-        <li>Yunwei Zhao, NYU.</li>
-        <li>Ankit Bhardwaj, NYU.</li>
-        <!-- <li>Lakshmi Subramanian, NYU.</li> -->
-      </ol>
-    </section>
-
+    <!-- Publications Section -->
     <section class="mb-5">
       <h2 class="h3 border-bottom pb-2 text-primary">Publications</h2>
-      <ol id="display-publications" class="list-styled">
-        <li class="mb-2">Ulzee An, Ankit Bhardwaj, Khader Shameer, Lakshminarayanan Subramanian. 
-            <i>"High Precision Mammography Lesion Identification from Imprecise Medical Annotations (LatentCADx)."</i>
-                Frontiers in Big Data, 2021.  <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8716325/">(PDF)</a>
+      <ol class="publication-list">
+        <li>
+          <em>"BEACON: Bayesian Contrastive Learning for Single-Cell Gene Regulatory Inference."</em><br>
+          Yunwei Zhao, Ankit Bhardwaj, Lakshminarayanan Subramanian.<br>
+          NeurIPS Workshop on AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development (AI4D3), 2025.<br>
+          <a href="https://openreview.net/forum?id=cVXvMshEFr" class="btn btn-sm btn-outline-primary mt-1">OpenReview</a>
         </li>
-        <li class="mb-2">Sonish Sivarajkumar, Pratyush Tandale, Ankit Bhardwaj, Kipp W. Johnson, Anoop Titus, Benjamin S. Glicksberg, Shameer Khader, Kamlesh K. Yadav, Lakshminarayanan Subramanian.
-            <i>"Generation of a Compendium of Transcription Factor Cascades and Identification of Potential Therapeutic Targets using Graph Machine Learning."</i>
-                Genes, 2025. <a href="https://arxiv.org/abs/2311.17969">(PDF)</a>
+
+        
+        <li>
+          <em>"Generation of a Compendium of Transcription Factor Cascades and Identification of Potential Therapeutic Targets using Graph Machine Learning."</em><br>
+          Sonish Sivarajkumar, Pratyush Tandale, Ankit Bhardwaj, Kipp W. Johnson, Anoop Titus, Benjamin S. Glicksberg, Shameer Khader, Kamlesh K. Yadav, Lakshminarayanan Subramanian.<br>
+          Genes, 2025.<br>
+          <a href="https://arxiv.org/abs/2311.17969" class="btn btn-sm btn-outline-primary mt-1">arXiv</a>
         </li>
-         <li class="mb-2">Yunwei Zhao, Ankit Bhardwaj, Lakshminarayanan Subramanian.
-            <i>"BEACON: Bayesian Contrastive Learning for Single-Cell Gene Regulatory Inference."</i>
-                NeurIPS Workshop on AI Virtual Cells and Instruments: A New Era in Drug Discovery and Development (AI4D3), 2025. <a href="https://openreview.net/forum?id=cVXvMshEFr">(Open Review)</a>
+        
+        <li>
+          <em>"Limitations of scRNA-seq Zero-Imputation Methods for Network Inference."</em><br>
+          Ankit Bhardwaj, Joshua Weiner, Preetha Balasubramanian, Lakshminarayanan Subramanian.<br>
+          ICML Workshop on Machine Learning for Life and Material Science: From Theory to Industry Applications (ML4LMS), 2024.<br>
+          <a href="https://openreview.net/forum?id=VAOlHfzIUh" class="btn btn-sm btn-outline-primary mt-1">OpenReview</a>
         </li>
-         <li class="mb-2">Ankit Bhardwaj, Joshua Weiner, Preetha Balasubramanian, Lakshminarayanan Subramanian.
-            <i>"Limitations of scRNA-seq Zero-Imputation Methods for Network Inference"</i>
-                ICML Workshop on Machine Learning for Life and Material Science: From Theory to Industry Applications (ML4LMS), 2024. <a href="https://openreview.net/forum?id=VAOlHfzIUh">(Open Review)</a>
+        
+        <li>
+          <em>"Contra: Contrarian Statistics for Controlled Variable Selection."</em><br>
+          Mukund Sudarshan, Aahlad Puli, Lakshminarayanan Subramanian, Sriram Sankararaman, Rajesh Ranganath.<br>
+          AISTATS, 2021.<br>
+          <a href="https://proceedings.mlr.press/v130/sudarshan21a.html" class="btn btn-sm btn-outline-primary mt-1">Proceedings</a>
+        </li>
+        
+        <li>
+          <em>"High Precision Mammography Lesion Identification from Imprecise Medical Annotations (LatentCADx)."</em><br>
+          Ulzee An, Ankit Bhardwaj, Khader Shameer, Lakshminarayanan Subramanian.<br>
+          Frontiers in Big Data, 2021.<br>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8716325/" class="btn btn-sm btn-outline-primary mt-1">PMC</a>
+        </li>
+        
+        <!-- Additional high-impact biomedical papers -->
+        <li>
+          <em>"Fast Kernel-based Association Testing of non-linear genetic effects for Biobank-scale data."</em><br>
+          Boyang Fu, Ali Pazokitoroudi, Mukund Sudarshan, Lakshminarayanan Subramanian, Sriram Sankararaman.<br>
+          Nature Communications, 2023.<br>
+          <a href="https://www.nature.com/articles/s41467-023-40346-2" class="btn btn-sm btn-outline-primary mt-1">Link</a>
+        </li>
+        
+        <li>
+          <em>"Deep Significance Clustering: a novel approach for identifying risk-stratified and predictive patient subgroups."</em><br>
+          Yufang Huang, Yifan Liu, Peter A D Steel, Kelly M Axsom, John R Lee, Sri Lekha Tummalapalli, Fei Wang, Jyotishman Pathak, Lakshminarayanan Subramanian, Yiye Zhang.<br>
+          Journal of the American Medical Informatics Association (JAMIA), 2021.<br>
+          <a href="https://academic.oup.com/jamia" class="btn btn-sm btn-outline-primary mt-1">Full Text</a>
+        </li>
+        
+        <li>
+          <em>"The Importance of Long-Term Care Populations in models of COVID-19."</em><br>
+          Karl Pillemer, Lakshminarayanan Subramanian, Nathaniel Hupert.<br>
+          Journal of American Medical Association (JAMA), 2020.<br>
+          <a href="https://jamanetwork.com/journals/jama/fullarticle/2768396" class="btn btn-sm btn-outline-primary mt-1">Link</a>
+        </li>
+        
+        <li>
+          <em>"Sepsis in the era of data-driven medicine: personalizing risks, diagnoses, treatments and prognoses."</em><br>
+          Andrew C Liu, Krishna Patel, Ramya Dhatri Vunikili, Kipp W Johnson, Fahad Abdu, Shivani Kamath Belman, Benjamin S Glicksberg, Pratyush Tandale, Roberto Fontanez, Oommen K Mathew, Andrew Kasarskis, Priyabrata Mukherjee, Lakshminarayanan Subramanian, Joel T Dudley, Khader Shameer.<br>
+          Briefings in Bioinformatics, 2020.<br>
+          <a href="https://academic.oup.com/bib/article/21/3/981/5466494" class="btn btn-sm btn-outline-primary mt-1">Link</a>
+        </li>
+        
+        <li>
+          <em>"Quantifying the impact of dengue containment activities using high-resolution observational data."</em><br>
+          Nabeel Abdur Rehman, Henrik Salje, Moritz U G Kraemer, Lakshminarayanan Subramanian, Simon Cauchemez, Umar Saif, Rumi Chunara.<br>
+          PLOS Neglected Tropical Diseases, 2020.<br>
+          <a href="https://journals.plos.org/plosntds/article?id=10.1371/journal.pntd.0008279" class="btn btn-sm btn-outline-primary mt-1">Link</a>
+        </li>
+        
+        <li>
+          <em>"Fine-Grained Dengue Forecasting using Telephone Triage Services."</em><br>
+          Nabeel Abdur Rehman, Shankar Kalyanaraman, Talal Ahmad, Fahad Pervaiz, Umar Saif, Lakshminarayanan Subramanian.<br>
+          Science Advances, 2016.<br>
+          <a href="https://www.science.org/doi/10.1126/sciadv.1501215" class="btn btn-sm btn-outline-primary mt-1">PDF</a>
         </li>
       </ol>
+    </section>
+
+    <!-- Team Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Research Team</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <h5>Current Members</h5>
+          <ul>
+            <li>Yunwei Zhao - PhD Student, Courant Institute, NYU</li>
+            <li>Ankit Bhardwaj - PhD Student, Courant Institute, NYU</li>
+            <li>Lakshminarayanan Subramanian - Professor, Courant Institute, NYU</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5>Collaborators</h5>
+          <ul>
+            <li>Rajesh Ranganath - NYU</li>
+            <li>Sriram Sankararaman - UCLA</li>
+            <li>Yiye Zhang - Weill Cornell Medicine</li>
+            <li>Shameer Khader - Sanofi</li>
+            <li>Rumi Chunara - NYU</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Software & Resources Section -->
+    <section class="mb-5">
+      <h2 class="h3 border-bottom pb-2 text-primary">Software & Resources</h2>
+      <ul class="list-unstyled">
+        <li class="mb-2"><strong>BEACON:</strong> GRN inference from scRNA-seq (Coming soon)</li>
+      </ul>
     </section>
   </main>
 
   <!-- Footer -->
   <footer class="bg-light text-center text-muted py-4 mt-5 border-top">
-    &copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences | Department of Computer Science, New York University.
+    <p class="mb-0">&copy; 2025 Open Networks & Big Data Lab | Courant Institute of Mathematical Sciences</p>
+    <p class="mb-0">Department of Computer Science, New York University</p>
   </footer>
 
+  <!-- Bootstrap JS (optional, for interactive components) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
